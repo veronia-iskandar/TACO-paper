@@ -1,0 +1,5 @@
+,LUT,FF,DSP,BRAM,URAM,Frequency (MHz)
+HiSparse,47.27,22.7,7.63,7.22,53.33,237
+Serpens (Vitis version),15,14,8,36,40,223
+FCCM23,38,45,7,23,40,310
+Ours,45,25.05,7.44,20.11,47.5,260

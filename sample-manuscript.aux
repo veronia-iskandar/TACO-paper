@@ -1,0 +1,134 @@
+\relax 
+\providecommand{\transparent@use}[1]{}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{kernelfarer,IDL}
+\citation{ATC}
+\citation{cummins2021a}
+\citation{hisparse,graphlily,fccm-spmv,serpens}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Motivation}{1}{section.2}\protected@file@percent }
+\citation{kernelfarer}
+\citation{ATC}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Our Approach}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Compiler}{2}{subsubsection.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Profitability}{2}{subsubsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Legality}{2}{subsubsection.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Hardware}{2}{subsubsection.2.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{2}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Linear Algebra Code Matcher}{2}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Function Filtering}{2}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Input/Output Detection}{3}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Variable Mapping}{3}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of variables in GEMM and GEMV}}{4}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{variables}{{1}{4}{Comparison of variables in GEMM and GEMV}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Classifying operations between square matrices}{4}{subsubsection.4.3.1}\protected@file@percent }
+\newlabel{eq:mul}{{3}{4}{Classifying operations between square matrices}{equation.4.3}{}}
+\newlabel{eq:trace}{{5}{4}{Classifying operations between square matrices}{equation.4.5}{}}
+\citation{static}
+\citation{ATC}
+\newlabel{eq:trace_mul}{{6}{5}{Classifying operations between square matrices}{equation.4.6}{}}
+\newlabel{eq:operation}{{7}{5}{Classifying operations between square matrices}{equation.4.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Size Detection}{5}{subsection.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example SVG inclusion}}{6}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:decision-tree}{{1}{6}{Example SVG inclusion}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Code Replacement}{6}{subsection.4.5}\protected@file@percent }
+\citation{Shuhai,9460576}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Bandwidth for varying input sizes. (a) Sequential memory access. (b) MV.}}{7}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:example}{{2}{7}{Bandwidth for varying input sizes. (a) Sequential memory access. (b) MV}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Offloading Profitability Prediction}{7}{section.5}\protected@file@percent }
+\newlabel{offloading-profitability}{{5}{7}{Offloading Profitability Prediction}{section.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Effect of varying (a) $AI_{CPU\rightarrow FPGA}$. (b) $Size_{in}$ on FPGA-HBM speedup over CPU.}}{8}{figure.caption.5}\protected@file@percent }
+\newlabel{thresholds}{{3}{8}{Effect of varying (a) $AI_{CPU\rightarrow FPGA}$. (b) $Size_{in}$ on FPGA-HBM speedup over CPU}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Matrix-Vector Multiplication Acceleration on FPGA-HBM}{8}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Custom Matrix Format}{8}{subsection.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example SVG inclusion}}{9}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:mat_format}{{4}{9}{Example SVG inclusion}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Accelerator Architecture}{9}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Matrix Loader}{9}{subsubsection.6.2.1}\protected@file@percent }
+\citation{hisparse,fccm-spmv}
+\citation{hisparse}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example SVG inclusion}}{10}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:architecture}{{5}{10}{Example SVG inclusion}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Example SVG inclusion}}{10}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:input-packets}{{6}{10}{Example SVG inclusion}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Vector Read/Write Units}{10}{subsubsection.6.2.2}\protected@file@percent }
+\citation{hisparse,graphlily}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Processing Elements with History Keeping}{11}{subsubsection.6.2.3}\protected@file@percent }
+\citation{autobridge}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Example SVG inclusion}}{12}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:vector-unit}{{7}{12}{Example SVG inclusion}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Example SVG inclusion}}{13}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:pe}{{8}{13}{Example SVG inclusion}{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Example SVG inclusion}}{13}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:pe}{{9}{13}{Example SVG inclusion}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Implementation Flow Enhancements}{13}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}Split-Kernel Design}{13}{subsubsection.6.3.1}\protected@file@percent }
+\citation{hisparse}
+\citation{gpu-dense}
+\citation{hisparse}
+\citation{serpens}
+\citation{fccm-spmv}
+\citation{Xilinx2021}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.2}CAD Directives}{14}{subsubsection.6.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7} Hardware Evaluation and Benchmarking}{14}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Experimental Setup}{14}{subsection.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}CPU and GPU Baselines}{14}{subsubsection.7.1.1}\protected@file@percent }
+\citation{ogb}
+\citation{transformer}
+\bibstyle{ACM-Reference-Format}
+\bibdata{references.bib}
+\bibcite{gpu-dense}{{1}{2020}{{Brown et~al\mbox  {.}}}{{}}}
+\bibcite{cummins2021a}{{2}{2021}{{Cummins et~al\mbox  {.}}}{{}}}
+\bibcite{kernelfarer}{{3}{2021}{{De~Carvalho et~al\mbox  {.}}}{{}}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}FPGA Baselines}{15}{subsubsection.7.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.3}Metrics}{15}{subsubsection.7.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.4}Datasets}{15}{subsubsection.7.1.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Benchmark datasets with sizes and densities.}}{15}{table.caption.12}\protected@file@percent }
+\newlabel{datasets}{{2}{15}{Benchmark datasets with sizes and densities}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Accelerator Evaluation}{15}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Compiler Evaluation}{15}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Setup}{15}{subsection.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.1}User Code}{15}{subsubsection.8.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.2}Baselines}{15}{subsubsection.8.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Detection}{15}{subsection.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Performance}{15}{subsection.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Discussion}{15}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{15}{section*.21}\protected@file@percent }
+\bibcite{hisparse}{{4}{2022}{{Du et~al\mbox  {.}}}{{}}}
+\bibcite{IDL}{{5}{2018}{{Ginsbach et~al\mbox  {.}}}{{}}}
+\bibcite{autobridge}{{6}{2021}{{Guo et~al\mbox  {.}}}{{}}}
+\bibcite{ogb}{{7}{2020}{{Hu et~al\mbox  {.}}}{{}}}
+\bibcite{graphlily}{{8}{2021}{{Hu et~al\mbox  {.}}}{{}}}
+\bibcite{fccm-spmv}{{9}{2023}{{Jain et~al\mbox  {.}}}{{}}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Performance comparison between CPU (MKL), GPU (cuSparse), and our implementation, including throughput and bandwidth efficiency.}}{16}{table.caption.13}\protected@file@percent }
+\newlabel{cpu-gpu}{{3}{16}{Performance comparison between CPU (MKL), GPU (cuSparse), and our implementation, including throughput and bandwidth efficiency}{table.caption.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Performance comparison between Vitis Sparse Library and our implementation, including throughput and bandwidth efficiency.}}{16}{table.caption.14}\protected@file@percent }
+\newlabel{vsl}{{4}{16}{Performance comparison between Vitis Sparse Library and our implementation, including throughput and bandwidth efficiency}{table.caption.14}{}}
+\bibcite{ATC}{{10}{2023}{{Mart\'{\i }nez et~al\mbox  {.}}}{{}}}
+\bibcite{static}{{11}{2009}{{Ravitch et~al\mbox  {.}}}{{}}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Performance comparison between HiSparse and our implementation, including throughput and bandwidth efficiency.}}{17}{table.caption.15}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Performance comparison between Serpens and our implementation.}}{17}{table.caption.16}\protected@file@percent }
+\newlabel{serpens}{{6}{17}{Performance comparison between Serpens and our implementation}{table.caption.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Performance comparison between FCCM'23 and our implementation.}}{17}{table.caption.16}\protected@file@percent }
+\newlabel{fccm}{{7}{17}{Performance comparison between FCCM'23 and our implementation}{table.caption.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Performance comparison for dense matrix-vector multiplication between HiSparse, hipBLAS, and our implementation, including throughput and bandwidth efficiency.}}{17}{table.caption.17}\protected@file@percent }
+\newlabel{dense}{{8}{17}{Performance comparison for dense matrix-vector multiplication between HiSparse, hipBLAS, and our implementation, including throughput and bandwidth efficiency}{table.caption.17}{}}
+\bibcite{serpens}{{12}{2022}{{Song et~al\mbox  {.}}}{{}}}
+\bibcite{transformer}{{13}{2017}{{Vaswani et~al\mbox  {.}}}{{}}}
+\bibcite{Xilinx2021}{{14}{2021}{{Xilinx}}{{}}}
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{8.37pt}
+\newlabel{tocindent2}{14.53499pt}
+\newlabel{tocindent3}{22.194pt}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Resource utilization comparison among different implementations.}}{18}{table.caption.18}\protected@file@percent }
+\newlabel{resource_util}{{9}{18}{Resource utilization comparison among different implementations}{table.caption.18}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Comparison of power and energy efficiency among different implementations.}}{18}{table.caption.19}\protected@file@percent }
+\newlabel{power_energy_efficiency}{{10}{18}{Comparison of power and energy efficiency among different implementations}{table.caption.19}{}}
+\newlabel{TotPages}{{18}{18}{}{page.18}{}}
+\gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{1}}
+\gdef \@abspage@last{18}

@@ -1,0 +1,267 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{14}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Brown et~al\mbox{.}(2020)]%
+        {gpu-dense}
+\bibfield{author}{\bibinfo{person}{Cade Brown}, \bibinfo{person}{Ahmad
+  Abdelfattah}, \bibinfo{person}{Stanimire Tomov}, {and} \bibinfo{person}{Jack
+  Dongarra}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Design, Optimization, and Benchmarking of Dense
+  Linear Algebra Algorithms on AMD GPUs}. In \bibinfo{booktitle}{\emph{2020
+  IEEE High Performance Extreme Computing Conference (HPEC)}}.
+  \bibinfo{pages}{1--7}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/HPEC43674.2020.9286214}
+\showDOI{\tempurl}
+
+
+\bibitem[Cummins et~al\mbox{.}(2021)]%
+        {cummins2021a}
+\bibfield{author}{\bibinfo{person}{Chris Cummins}, \bibinfo{person}{Zacharias
+  Fisches}, \bibinfo{person}{Tal Ben-Nun}, \bibinfo{person}{Torsten Hoefler},
+  \bibinfo{person}{Michael O'Boyle}, {and} \bibinfo{person}{Hugh Leather}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{ProGraML: A Graph-based Program Representation for
+  Data Flow Analysis and Compiler Optimizations}}. In
+  \bibinfo{booktitle}{\emph{Thirty-eighth International Conference on Machine
+  Learning (ICML)}}.
+\newblock
+
+
+\bibitem[De~Carvalho et~al\mbox{.}(2021)]%
+        {kernelfarer}
+\bibfield{author}{\bibinfo{person}{Jo\~{a}o P.~L. De~Carvalho},
+  \bibinfo{person}{Braedy Kuzma}, \bibinfo{person}{Ivan Korostelev},
+  \bibinfo{person}{Jos\'{e}~Nelson Amaral}, \bibinfo{person}{Christopher
+  Barton}, \bibinfo{person}{Jos\'{e} Moreira}, {and} \bibinfo{person}{Guido
+  Araujo}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{KernelFaRer: Replacing Native-Code Idioms with
+  High-Performance Library Calls}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Archit. Code Optim.}}
+  \bibinfo{volume}{18}, \bibinfo{number}{3}, Article \bibinfo{articleno}{38}
+  (\bibinfo{date}{jun} \bibinfo{year}{2021}), \bibinfo{numpages}{22}~pages.
+\newblock
+\showISSN{1544-3566}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3459010}
+\showDOI{\tempurl}
+
+
+\bibitem[Du et~al\mbox{.}(2022)]%
+        {hisparse}
+\bibfield{author}{\bibinfo{person}{Yixiao Du}, \bibinfo{person}{Yuwei Hu},
+  \bibinfo{person}{Zhongchun Zhou}, {and} \bibinfo{person}{Zhiru Zhang}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{High-Performance Sparse Linear Algebra on
+  HBM-Equipped FPGAs Using HLS: A Case Study on SpMV}. \bibinfo{pages}{54--64}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3490422.3502368}
+\showDOI{\tempurl}
+
+
+\bibitem[Ginsbach et~al\mbox{.}(2018)]%
+        {IDL}
+\bibfield{author}{\bibinfo{person}{Philip Ginsbach}, \bibinfo{person}{Toomas
+  Remmelg}, \bibinfo{person}{Michel Steuwer}, \bibinfo{person}{Bruno Bodin},
+  \bibinfo{person}{Christophe Dubach}, {and} \bibinfo{person}{Michael F.~P.
+  O'Boyle}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Automatic Matching of Legacy Code to Heterogeneous
+  APIs: An Idiomatic Approach}. In \bibinfo{booktitle}{\emph{Proceedings of the
+  Twenty-Third International Conference on Architectural Support for
+  Programming Languages and Operating Systems}} (Williamsburg, VA, USA)
+  \emph{(\bibinfo{series}{ASPLOS '18})}. \bibinfo{publisher}{Association for
+  Computing Machinery}, \bibinfo{address}{New York, NY, USA},
+  \bibinfo{pages}{139–153}.
+\newblock
+\showISBNx{9781450349116}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3173162.3173182}
+\showDOI{\tempurl}
+
+
+\bibitem[Guo et~al\mbox{.}(2021)]%
+        {autobridge}
+\bibfield{author}{\bibinfo{person}{Licheng Guo}, \bibinfo{person}{Yuze Chi},
+  \bibinfo{person}{Jie Wang}, \bibinfo{person}{Jason Lau},
+  \bibinfo{person}{Weikang Qiao}, \bibinfo{person}{Ecenur Ustun},
+  \bibinfo{person}{Zhiru Zhang}, {and} \bibinfo{person}{Jason Cong}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{AutoBridge: Coupling Coarse-Grained Floorplanning
+  and Pipelining for High-Frequency HLS Design on Multi-Die FPGAs}.
+\newblock \bibinfo{journal}{\emph{FPGA. ACM International Symposium on
+  Field-Programmable Gate Arrays}}  \bibinfo{volume}{2021},
+  \bibinfo{pages}{81--92}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3431920.3439289}
+\showDOI{\tempurl}
+
+
+\bibitem[Hu et~al\mbox{.}(2020)]%
+        {ogb}
+\bibfield{author}{\bibinfo{person}{Weihua Hu}, \bibinfo{person}{Matthias Fey},
+  \bibinfo{person}{Marinka Zitnik}, \bibinfo{person}{Yuxiao Dong},
+  \bibinfo{person}{Hongyu Ren}, \bibinfo{person}{Bowen Liu},
+  \bibinfo{person}{Michele Catasta}, {and} \bibinfo{person}{Jure Leskovec}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Open graph benchmark: datasets for machine learning
+  on graphs}. In \bibinfo{booktitle}{\emph{Proceedings of the 34th
+  International Conference on Neural Information Processing Systems}}
+  (Vancouver, BC, Canada) \emph{(\bibinfo{series}{NIPS '20})}.
+  \bibinfo{publisher}{Curran Associates Inc.}, \bibinfo{address}{Red Hook, NY,
+  USA}, Article \bibinfo{articleno}{1855}, \bibinfo{numpages}{16}~pages.
+\newblock
+\showISBNx{9781713829546}
+
+
+\bibitem[Hu et~al\mbox{.}(2021)]%
+        {graphlily}
+\bibfield{author}{\bibinfo{person}{Yuwei Hu}, \bibinfo{person}{Yixiao Du},
+  \bibinfo{person}{Ecenur Ustun}, {and} \bibinfo{person}{Zhiru Zhang}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{GraphLily: Accelerating Graph Linear Algebra on
+  HBM-Equipped FPGAs}. In \bibinfo{booktitle}{\emph{2021 IEEE/ACM International
+  Conference On Computer Aided Design (ICCAD)}}. \bibinfo{pages}{1--9}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/ICCAD51958.2021.9643582}
+\showDOI{\tempurl}
+
+
+\bibitem[Jain et~al\mbox{.}(2023)]%
+        {fccm-spmv}
+\bibfield{author}{\bibinfo{person}{Abhishek~Kumar Jain},
+  \bibinfo{person}{Chirag Ravishankar}, \bibinfo{person}{Hossein Omidian},
+  \bibinfo{person}{Sharan Kumar}, \bibinfo{person}{Maithilee Kulkarni},
+  \bibinfo{person}{Aashish Tripathi}, {and} \bibinfo{person}{Dinesh Gaitonde}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Modular and Lean Architecture with Elasticity for
+  Sparse Matrix Vector Multiplication on FPGAs}. In
+  \bibinfo{booktitle}{\emph{2023 IEEE 31st Annual International Symposium on
+  Field-Programmable Custom Computing Machines (FCCM)}}.
+  \bibinfo{pages}{133--143}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/FCCM57271.2023.00023}
+\showDOI{\tempurl}
+
+
+\bibitem[Mart\'{\i}nez et~al\mbox{.}(2023)]%
+        {ATC}
+\bibfield{author}{\bibinfo{person}{Pablo~Antonio Mart\'{\i}nez},
+  \bibinfo{person}{Jackson Woodruff}, \bibinfo{person}{Jordi
+  Armengol-Estap\'{e}}, \bibinfo{person}{Gregorio Bernab\'{e}},
+  \bibinfo{person}{Jos\'{e}~Manuel Garc\'{\i}a}, {and} \bibinfo{person}{Michael
+  F.~P. O’Boyle}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Matching Linear Algebra and Tensor Code to
+  Specialized Hardware Accelerators}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 32nd ACM SIGPLAN International Conference on Compiler Construction}}
+  (Montr\'{e}al, QC, Canada) \emph{(\bibinfo{series}{CC 2023})}.
+  \bibinfo{publisher}{Association for Computing Machinery},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{85–97}.
+\newblock
+\showISBNx{9798400700880}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3578360.3580262}
+\showDOI{\tempurl}
+
+
+\bibitem[Ravitch et~al\mbox{.}(2009)]%
+        {static}
+\bibfield{author}{\bibinfo{person}{Tristan Ravitch}, \bibinfo{person}{Steve
+  Jackson}, \bibinfo{person}{Eric Aderhold}, {and} \bibinfo{person}{Ben
+  Liblit}.} \bibinfo{year}{2009}\natexlab{}.
+\newblock \showarticletitle{Automatic generation of library bindings using
+  static analysis}.
+\newblock \bibinfo{journal}{\emph{SIGPLAN Not.}} \bibinfo{volume}{44},
+  \bibinfo{number}{6} (\bibinfo{date}{jun} \bibinfo{year}{2009}),
+  \bibinfo{pages}{352–362}.
+\newblock
+\showISSN{0362-1340}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1543135.1542516}
+\showDOI{\tempurl}
+
+
+\bibitem[Song et~al\mbox{.}(2022)]%
+        {serpens}
+\bibfield{author}{\bibinfo{person}{Linghao Song}, \bibinfo{person}{Yuze Chi},
+  \bibinfo{person}{Licheng Guo}, {and} \bibinfo{person}{Jason Cong}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Serpens: a high bandwidth memory based accelerator
+  for general-purpose sparse matrix-vector multiplication}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 59th ACM/IEEE Design Automation
+  Conference}} (San Francisco, California) \emph{(\bibinfo{series}{DAC '22})}.
+  \bibinfo{publisher}{Association for Computing Machinery},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{211–216}.
+\newblock
+\showISBNx{9781450391429}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3489517.3530420}
+\showDOI{\tempurl}
+
+
+\bibitem[Vaswani et~al\mbox{.}(2017)]%
+        {transformer}
+\bibfield{author}{\bibinfo{person}{Ashish Vaswani}, \bibinfo{person}{Noam
+  Shazeer}, \bibinfo{person}{Niki Parmar}, \bibinfo{person}{Jakob Uszkoreit},
+  \bibinfo{person}{Llion Jones}, \bibinfo{person}{Aidan~N. Gomez},
+  \bibinfo{person}{\L{}ukasz Kaiser}, {and} \bibinfo{person}{Illia
+  Polosukhin}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \showarticletitle{Attention is all you need}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 31st International Conference on
+  Neural Information Processing Systems}} (Long Beach, California, USA)
+  \emph{(\bibinfo{series}{NIPS'17})}. \bibinfo{publisher}{Curran Associates
+  Inc.}, \bibinfo{address}{Red Hook, NY, USA}, \bibinfo{pages}{6000–6010}.
+\newblock
+\showISBNx{9781510860964}
+
+
+\bibitem[Xilinx(2021)]%
+        {Xilinx2021}
+\bibfield{author}{\bibinfo{person}{Xilinx}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \bibinfo{title}{Vitis Sparse Library}.
+\newblock
+  \bibinfo{howpublished}{\url{https://xilinx.github.io/Vitis_Libraries/sparse/2021.1/overview.html}}.
+\newblock
+
+
+\end{thebibliography}

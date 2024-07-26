@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Classifying Matrix Operations by Properties}
+\author{Carlos Eduardo Santos}
+\date{October 2023}
+
+\begin{document}
+	\maketitle
+	
+	\section{Classifying operations between square matrices}
+	
+
+	Given the square matrices \(A\), \(B\), and \(C\) with order \(n\). There are no constraints on usual matrices multiplication regarding their orders. The usual matrices multiplication \(AB\) is given by Eq. \eqref{eq:mul}.
+	
+	\begin{equation}
+		AB = \sum_{k=1}^{n} a_{ik} b_{kj}, \quad i, j = 1, \ldots, n.
+		\label{eq:mul}
+	\end{equation}
+	
+	where \(a_{ik}\) and \(b_{kj}\) are the matrix entries of \(A\) and \(B\) respectively, and \(n\) is the order of the square matrices. The multiplication property is defined as:
+
+	\begin{enumerate}
+		\item \((cA)B = c(AB)\)
+	\end{enumerate}
+	
+	For the square matrix \(A\), the trace \(\text{tr}(A)\) is defined as shown in Eq. \eqref{eq:trace}.
+	
+	\begin{equation}
+		\text{tr}(A) = \sum_{i=1}^{n} a_{ii}
+		\label{eq:trace}
+	\end{equation}
+	
+	The basic properties of the trace are as follows:
+	\begin{enumerate}
+		\item \(\text{tr}(A+B) = \text{tr}(A) + \text{tr}(B)\)
+		\item \(\text{tr}(\lambda A) = \lambda \text{tr}(A)\)
+	\end{enumerate}
+	
+	where \(\lambda\) is a scalar number. Based on the multiplication and trace properties shown above, we get:
+	
+	\begin{equation}
+		\text{tr}(\lambda AB) = \lambda \text{tr}(AB)
+		\label{eq:trace_mul}
+	\end{equation}
+	
+	Considering that \(\text{tr}(\lambda A + B) = \lambda \text{tr}(A) + \text{tr}(B)\), we can see some differences between matrix multiplication and. for example, matrix addition with respect to the trace properties. We can use this difference to classify these matrix operations when the operators and results are known. For instance, considering the matrices \(A\), \(B\), and \(C\) such that:
+	
+	\begin{equation}
+		A ? B = C
+		\label{eq:operation}
+	\end{equation}
+		
+	\begin{enumerate}
+		\item The square matrices \(A\), \(B\), and \(C\) must have the same order.
+		\item If the operation is multiplication or dot product, the equation \(\text{tr}(\lambda AB) - \lambda \text{tr}(AB) = 0\) is true (see Eq. \eqref{eq:trace_mul}). Otherwise, the operation is addition.
+		\item If \(C\) is a scalar, the operation is a dot product; otherwise, it is multiplication.
+	\end{enumerate}
+	
+	Figure 1 shows the algorithm diagram.
+	
+	\begin{figure}[h!]
+		\centering
+		\caption{Graph to identify the operations in square matrices.}
+	\end{figure}
+	
+
+	
+\end{document}
