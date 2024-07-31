@@ -51,6 +51,16 @@
 \usepackage{subcaption}
 \usepackage{tabularx}
 \usepackage{multirow}
+\usepackage{standalone}
+\usepackage{pgfplots}
+\usepackage{csvsimple}
+\usetikzlibrary{calc}
+\usetikzlibrary{babel}
+\usetikzlibrary{patterns}
+\usepackage{geometry}
+\geometry{margin=1in} 
+\usepackage{pgfplotstable}
+\usetikzlibrary{pgfplots.groupplots}
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
 \AtBeginDocument{%
@@ -570,11 +580,119 @@ AMD/Xilinx Vivado tool provides various directives to customize the FPGA impleme
 %\subsubsection{Design Space Exploration} 
 %buffer sizes, num clusters. Alternative: mention buffer sizes in vec unit and pe subsections
 
+\section{Compiler Evaluation}
+\subsection{Experimental Setup}
+The compiler tool and the native GEMM and GEMV codes are run on an AMD 1950X 2.19 GHz 16-Core machine. LLVM-14 and clang-14 were used for the compiler tool.  
+
+\subsubsection{User Code}
+For ease of comparison with state-of-the-art code detection methods, we use the same GEMM benchmarks used for evaluating the ATC compiler \cite{ATC}. These benchmarks are 50 C and C++ GEMM implementations which were collected from Github. They are categorized by the ATC compiler authors as follows: 
+\begin{itemize}
+	\item Naive: naive implementations with the known 3 nested loops.
+	\item Naive Parallel: naive but with simple outer loop parallelization.
+	\item Unrolled: naive with unrolled loops.
+	\item Kernel Calls: implementations that divide the loops into different function calls.
+	\item Blocked: tiled implementations.
+	\item Goto: implementations of the Goto algorithm \cite{Goto}
+	\item Strassen: implementations of the Strassen algorithm \cite{STRASSEN1969}
+	\item Intrinsics: implementations using Intel intrinsics
+\end{itemize}
+In addition, we select 50 non-GEMM codes from the OJClone benchmarks and non-GEMM linear algebra code to check whether any of the approaches gave false positives. We follow the same procedure for GEMV benchmarks, where we collect user codes from Github, and select 20 programs after eliminating duplicates and programs which had compilation or implementation errors. Table \ref{gemv-codes} shows the characteristics of the test codes and their categorization.
+
+%gemv codes
+
+\subsubsection{Baselines}
+We evaluate our approach against 5 state-of-the-art matchers:
+\begin{itemize}
+	\item IDL: Idioms are described using an idiom description language \cite{IDL}, which is translated into a set of constraints over LLVM IR.
+	\item KernelFaRer: Uses different pattern matching to detect specific code constructs, matching specific matrix-multiplication structures \cite{kernelfarer}.
+	\item FACC*: FACC uses neural embeddings and behavioral syn-
+	thesis to detect candidates for acceleration \cite{facc}. FACC* improves over it by
+	supporting multi-dimensional arrays.
+	\item ATC: the ATC compiler uses a neural program classifier to detect regions of code that are likely to be linear algebraic operations. Afterwards, it uses input/output analysis to match user program variables with the particular API formal parameters. We share with ATC the input/output detection step which relies on monitoring argument values before and after execution, as well as the concept of using behavioral equivalence for code detection.
+\end{itemize}
+
+
+\subsection{Detection Accuracy}
+
+Fig. \ref{fig:detection} shows the percentage of GEMM programs matched
+by each technique across each of the 8 categories of code.
+IDL was able to match only 6 cases out of 50. The reason for this is that the constraint-based matching method it uses only detects traditional implementations. The detected codes we largely in the naive category, with only 2 cases for unrolled implementations detected. Matching more complex code requires manually writing new constraints to describe each code category. KernelFaRer's patterm matching approach was more successful than IDL. It was able to detect 11 GEMMs codes. However, all the 11 detected cases were naive implementations. All other variations were undetected.
+
+FACC*, ATC, and our approach share the broad concept of input/output testing. FACC* performed poorly on naive implementations, but better on others. the reason for this is that FACC* limits the size of the mapping search space, with a timeout of less than 10 minutes. Within this time limit, FACC* was able to 
+was able to detect 10 cases. ATC is significantly more robust than the rest of the baselines across all categories, matching 42 out of 50 cases. Our approach achieves even higher accuracy than ATC, matching 45 out of the 50 cases within much less execution time. Similarly for GEMV detection, our approach achieves
+90\% detection accuracy. Table \ref{gemv-codes} shows the matching result for each code.
+
+Both our approach and ATC are able to detect all naive implementations and the majority within each other category, and are the only methods which detect GEMMs and GEMVs in codes containing kernel calls and intrinsic instructions. None of the methods classified any of the 50 non-GEMMs as a GEMM. Across all methods, there were no false positives.
+
+
+%http://latexcolor.com/
+\definecolor{c1}{rgb}{0.75, 0.0, 0.2}
+%\definecolor{c1}{rgb}{0.8, 0.33, 0.0}
+%\definecolor{c1}{rgb}{0.8, 0.33, 0.0}
+%\definecolor{c1}{rgb}{1.0, 0.44, 0.37}
+\definecolor{c2}{rgb}{0.0, 0.72, 0.92}
+\definecolor{c4}{rgb}{0.96, 0.73, 1.0}
+\definecolor{c3}{rgb}{0.98, 0.81, 0.69}
+\definecolor{c5}{rgb}{0.0, 0.44, 1.0}
+\definecolor{c6}{rgb}{0.0, 0.42, 0.24}
+
+\begin{figure}[h!]
+	\centering
+	\includestandalone{fig-compiler-detection} % barplot.tex without the .tex extension
+	\caption{Bar plot of compiler detection data.}
+	\label{fig:detection}
+\end{figure}
+
+
+\begin{table}[h]
+	\centering
+	\caption{GEMV Test Cases}
+	\label{tab:gemv_test_cases}
+	\begin{tabular}{|l|cccc|}
+		\hline
+		Algorithm & Code & LoC & Optimizations & Matched? \\ \hline
+		Naive & 1 & 15 & None & yes \\ \cline{2-5}
+		& 2 & 26 & None & yes \\ \cline{2-5}
+		& 3 & 14 & None & yes \\ \cline{2-5}
+		& 4 & 30 & None & yes \\ \cline{2-5}
+		& 5 & 19 & None & yes \\ \cline{2-5}
+		& 6 & 22 & None & yes \\ \hline
+		Parallel & 7 & 29 & OpenMP & yes \\ \cline{2-5}
+		& 8 & 48 & OpenMP & yes \\ \cline{2-5}
+		& 9 & 42 & OpenMP & yes \\ \cline{2-5}
+		& 10 & 44 & OpenMP & yes \\ \cline{2-5}
+		& 11 & 26 & C++ threads & no \\ \hline
+		Unrolled & 12 & 36 & None & yes \\ \cline{2-5}
+		& 13 & 34 & None & yes \\ \cline{2-5}
+		& 14 & 20 & None & yes \\ \cline{2-5}
+		& 15 & 76 & None & yes \\ \hline
+		Vectorized & 16 & 84 & Intrinsics (AVX2) & yes \\ \cline{2-5}
+		& 17 & 156 & Intrinsics (AVX2) & no \\ \cline{2-5}
+		& 18 & 47 & Intrinsics (AVX2) & yes \\ \cline{2-5}
+		& 19 & 35 & Intrinsics (SSE) & yes \\ \cline{2-5}
+		& 20 & 188 & Intrinsics (SSE) & yes \\ \hline
+	\end{tabular}
+    \caption{gemv codes}
+    \label{gemv-codes}
+\end{table}
+
+
+\subsection{Performance}
+
+Fig. \ref{fig:execution-times} shows the total time needed to execute the tool over the 50 GEMM benchmarks. The y-axis is plotted in log scale. It can be observed from the figure that our compiler is significantly faster than ATC (45x) and FACC* (244x). There are two main reasons for being much faster than ATC. First, ATC performs input size detection by passing inputs of random sizes to the function under test, and executes it with JIT. ATC records when it receives an out-of-bounds error, and experiments until it detects the correct size. On the other hand, we perform size detection using a single replacement pass on a copy of the code, which records the input sizes in a file. The second reason is that ATC generates random inputs to test the function and records the output. This input randomness leads to the necessity of performing many experiments. For our approach , however, we rely on input and output pairs which utilize the mathematical properties of matrices. Therefore, the number experiments we require is greatly reduced.
+
+\begin{figure}[h!]
+	\centering
+	\includestandalone{fig-execution-times} % barplot.tex without the .tex extension
+	\caption{Bar plot of execution time (log scale).}
+	\label{fig:execution-times}
+\end{figure}
+
 
 \section{ Hardware Evaluation and Benchmarking}
 
 \subsection{Experimental Setup}
-We implement our accelerator on AMD/Xilinx Alveo u280 using 21 HBM channels (19 for the matrix, 2 for the input and result vectors), offering a memory bandwidth of 272 GB/s. Further scaling to more than 21 HBM channels is possible, at the expense of degrading the design frequency.
+We implement our accelerator on AMD/Xilinx Alveo u280 using 21 HBM channels (19 for the matrix, 2 for the input and result vectors), offering a memory bandwidth of 272 GB/s. Further scaling to more than 21 HBM channels is possible, at the expense of degrading the design frequency. The accelerator is implemented in HLS using Xilinx Vitis \cite{Vitis} 2022.2.
 The input vector buffer and the output vector buffer sizes are both 16 MB. We use UltraRAM (URAM), a high capacity on-chip memory, as the implementation for both buffers. The sizes of the buffers are determined by design space exploration. The pack size is 8 for sparse input and 16 for dense input, since one HBM channel delivers 512 bits per access. Our accelerator runs at runs at a frequency of 260 MHz. 
 
 \subsubsection{CPU and GPU Baselines}
@@ -586,8 +704,12 @@ For dense operations, we compare against vendor-provided hipBLAS GPU library for
 
 \subsubsection{FPGA Baselines}
 
-We are not aware of any recent work which performs matrix-vector multiplication with an optimization for both sparse and dense inputs. Therefore, we compare our accelerator with state-of-the-art FPGA sparse accelerators — HiSparse \cite{hisparse}, Serpens \cite{serpens}, FCCM23 \cite{fccm-spmv}, and Vitis Sparse Library (VSL) \cite{Xilinx2021}. All baselines target FPGAs with HBM. Similar to our design, HiSparse uses fixed-point fixed-point data types. Serpens and FCCM23 use FP32 arithmetic. VSL is an optimized HLS library released as part of the Vitis 2020.2. In our experiments, we were unable to run VSL with large matrices so we only compare with it on small datasets. We compile VSL on a Xilinx Alveo U280 platform with
-16 HBM channels and 2 DDR channels providing 268 GB/s bandwidth in total.
+We are not aware of any recent work which performs matrix-vector multiplication with an optimization for both sparse and dense inputs. Therefore, we compare our accelerator with state-of-the-art FPGA sparse accelerators — HiSparse \cite{hisparse}, Serpens \cite{serpens}, FCCM23 \cite{fccm-spmv}, and Vitis Sparse Library (VSL) \cite{Xilinx2021}. All baselines target FPGAs with HBM. Similar to our design, HiSparse uses fixed-point fixed-point data types. Serpens and FCCM23 use FP32 arithmetic. VSL is an optimized HLS library released as part of the Vitis 2020.2. All baselines are open source, except for FCCm23. Additionally, the open source version of Serpens requires building with tapa \cite{tapa}. In our experiments, we encountered some version mismatch issues for building it with new releases of tapa. The released bitstream 
+requires older versions of the Alveo platforms. Therefore, we use the reported results in the paper.
+
+
+In our experiments, we were unable to run VSL with large matrices so we only compare with it on small datasets. We compile VSL on a Xilinx Alveo U280 platform with
+16 HBM channels and 2 DDR channels providing 268 GB/s bandwidth in total. For Serpens, the authors implement a Vitis-based version and another version which uses tapa \cite{tapa} to increase frequency. We use the metrics for the Vitis-based version for fairness of comparison with the other works. 
 
 
 
@@ -596,8 +718,7 @@ We are not aware of any recent work which performs matrix-vector multiplication 
 
 \subsubsection{Datasets}
 Table \ref{datasets} lists the matrix benchmarks used for the evaluation.
-googleplus, hollywood, and pokec are social network graphs, widely used in benchmarking graph processing systems. mouse-gene is a graph from computational biology. ogbl-ppa and ogbn-products are from OGB \cite{ogb}, a benchmark suite for the
-emerging graph neural networks. transformer-x is one layer from
+googleplus, hollywood, and pokec are social network graphs, widely used in benchmarking graph processing systems. mouse-gene is a graph from computational biology. ogbl-ppa and ogbn-products are from OGB \cite{ogb}, a benchmark suite for emerging graph neural networks. transformer-x is one layer from
 a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 
 
@@ -621,6 +742,7 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 \end{table}
 
 \subsection{Accelerator Evaluation}
+Table \ref{cpu-gpu} shows a comparison of our accelerator with CPU and GPU baselines for sparse matrix benchmarks. Compared to MKL, our implementation has 6x higher throughput and 8.6x higher bandwidth efficiency. Compared to cuSPARSE, we achieve 1.5x higher throughput and 3.6x higher bandwidth efficiency. 
 
 \begin{table}[h!]
 	\centering
@@ -630,25 +752,29 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 		\cline{2-7}
 		& \textbf{MKL (CPU)} & \textbf{cuSparse (GPU)} & \textbf{Ours} & \textbf{MKL (CPU)} & \textbf{cuSparse (GPU)} & \textbf{Ours} \\
 		\hline
-		google-plus & 5.1 & 27.2 & 32.5 & 18 & 56.4 & 265.02 \\		
-		ogbl-ppa & 4.1 & 18 & 29.65 & 14.7 & 37.2 & 265.5 \\		
-		hollywood & 4.4 & 22 & 36.18 & 15.6 & 46.6 & 268.11 \\		
-		pokec & 3 & 10 & 15.24 & 10.7 & 21.8 & 267.36 \\		
-		ogbn-products & 3.1 & 5 & 26.8 & 11 & 10.3 & 267.96 \\		
-		mouse-gene & 12.1 & 29 & 42.51 & 43 & 60 & 264.10 \\		
-		Transformer-50 & 5.9 & 26.9 & 34.31 & 20.9 & 55.5 & 267.75 \\		
-		Transformer-60 & 5.6 & 21.5 & 31 & 19.9 & 44.5 & 255.94 \\				
-		Transformer-70 & 5.2 & 17.7 & 26.48 & 18.3 & 36.6 & 262.5 \\		
-		Transformer-80 & 4.1 & 19.4  & 24.54 & 14.6  & 40.1  & 236.25 \\
-		Transformer-90 & 2.3 & 13.6 & 15.87 & 8.1 & 28 & 236.25 \\				
-		Transformer-95 & 1.2 & 10.7 & 7.05 & 4.3 & 22.2 & 157.5 \\
+		Transformer-50 & 5.9 & 26.9 & 34.31 & 20.9 & 55.5 & 133.87 \\		
+		Transformer-60 & 5.6 & 21.5 & 31 & 19.9 & 44.5 & 129.96 \\				
+		Transformer-70 & 5.2 & 17.7 & 26.48 & 18.3 & 36.6 & 131.25 \\		
+		Transformer-80 & 4.1 & 19.4  & 24.54 & 14.6  & 40.1  & 118.13 \\
+		Transformer-90 & 2.3 & 13.6 & 15.87 & 8.1 & 28 & 118.13 \\				
+		Transformer-95 & 1.2 & 10.7 & 7.05 & 4.3 & 22.2 & 78.75 \\
+		mouse-gene & 12.1 & 29 & 42.51 & 43 & 60 & 132.05 \\
+		google-plus & 5.1 & 27.2 & 32.5 & 18 & 56.4 & 132.51 \\
+		ogbl-ppa & 4.1 & 18 & 29.65 & 14.7 & 37.2 & 132.75 \\
+		hollywood & 4.4 & 22.6 & 36.18 & 15.6 & 46.6 & 134.08 \\		
+		pokec & 3 & 10.5 & 15.24 & 10.7 & 21.8 & 133.68 \\		
+		ogbn-products & 3.1 & 5 & 26.8 & 11 & 10.3 & 133.98 \\						
 		\hline
-		Geometric mean & 4.16 & 16.26 & 25.05 & 14.42 & 34.6 & 233.52 \\
+		
+		Geometric mean & 4.06 & 16.75 & \textbf{24.5} & 14.42 & 34.62 & \textbf{124.6} \\
 		\hline
 	\end{tabular}
 	\caption{Performance comparison between CPU (MKL), GPU (cuSparse), and our implementation, including throughput and bandwidth efficiency.}
 	\label{cpu-gpu}
 \end{table}
+
+We now compare our accelerator to the accelerators dedicated for SpMV. We show the results for every baseline in a separate table to allow for a fair comparison, since not all benchmarks results are reported for all baselines.
+Table \ref{vsl} shows a comparison with VSL. Our implementation is 2.2x faster than VSL, with 3.33x higher bandwidth efficiency. Regarding HiSparse, Table \ref{hisparse} shows that we outperform it by 1.5x in terms of throughput, and 1.9x in terms of bandwidth efficiency. Tables \ref{serpens} and \ref{fccm23} illustrate how our architecture compares to Serpens and FCCM23 respectively. We achieve roughly the same performance in both cases. The FCCM23 architecture was not evaluated for larger benchmarks, therefore it is not clear how to would perform for matrix sizes larger than 63K x 63K. In summary, we conclude that for sparse benchmarks, our architecture achieves the same performance as that of dedicated sparse accelerators in worst cases, and up to 2.2x higher throughput in best cases.
 
 \begin{table}[h!]
 	\centering
@@ -658,14 +784,14 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 		\cline{2-5}
 		& \textbf{Vitis} & \textbf{Ours} & \textbf{Vitis} & \textbf{Ours} \\
 		\hline
-		Transformer-50 & 17.5 & 34.31 & 65.2 & 267.75 \\
-		Transformer-60 & 14.6 & 31 & 54.4 & 255.94 \\
-		Transformer-70 & 13.0 & 26.48 & 48.7 & 262.5 \\
-		Transformer-80 & 10.5 & 24.54 & 39.1 & 236.25 \\
-		Transformer-90 & 5.8 & 15.89 & 21.8 & 236.25 \\
-		Transformer-95 & 3.3 & 7.05 & 12.4 & 157.5 \\
+		Transformer-50 & 17.5 & 34.31 & 65.2 & 133.87 \\
+		Transformer-60 & 14.6 & 31 & 54.4 & 129.96 \\
+		Transformer-70 & 13.0 & 26.48 & 48.7 & 131.25 \\
+		Transformer-80 & 10.5 & 24.54 & 39.1 & 118.13 \\
+		Transformer-90 & 5.8 & 15.89 & 21.8 & 118.13 \\
+		Transformer-95 & 3.3 & 7.05 & 12.4 & 78.75 \\
 		\hline
-		Geometric mean & 9.07 & 18.57 & 34.9 & 206.38 \\
+		Geometric mean & 9.34 & \textbf{20.64} & 34.96 & \textbf{116.57} \\
 		\hline
 	\end{tabular}
 	\caption{Performance comparison between Vitis Sparse Library and our implementation, including throughput and bandwidth efficiency.}
@@ -681,27 +807,24 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 		\cline{2-5}
 		& \textbf{HiSparse} & \textbf{Ours} & \textbf{HiSparse} & \textbf{Ours} \\
 		\hline
-		google-plus & 21.2 & 32.5 & 82.2 & 265.02 \\
-		ogbl-ppa & 24.4 & 29.65 & 94.6 & 265.5 \\
-		hollywood & 24.9 & 36.18 & 96.7 & 268.11 \\
-		pokec & 11.2 & 15.24 & 43.6 & 267.36 \\
-		ogbn-products & 20.6 & 26.8 & 79.9 & 267.96 \\
-		mouse-gene & 27.2 & 42.52 & 90 & 264.10 \\
-		Transformer-50 & 21.9 & 34.31 & 84.7 & 267.75 \\
-		Transformer-60 & 18.9 & 31 & 73.4 & 255.94 \\		
-		Transformer-70 & 16.5 & 26.48 & 63.9 & 262.5 \\
-		
-		Transformer-80 & 14.8 & 24.54 & 57.4 & 236.25 \\
-
-		Transformer-90 & 9.7 & 15.89 & 37.8 & 236.25 \\
-
-		
-		Transformer-95 & 5.7 & 7.05 & 22.0 & 157.5 \\
+		Transformer-50 & 21.9 & 34.31 & 84.7 & 133.87 \\
+		Transformer-60 & 18.9 & 31 & 73.4 & 129.96 \\		
+		Transformer-70 & 16.5 & 26.48 & 63.9 & 131.25 \\		
+		Transformer-80 & 14.8 & 24.54 & 57.4 & 118.13 \\
+		Transformer-90 & 9.7 & 15.89 & 37.8 & 118.13 \\		
+		Transformer-95 & 5.7 & 7.05 & 22.0 & 78.75 \\
+		mouse-gene & 27.2 & 42.52 & 105.4 & 132.05 \\
+		google-plus & 21.2 & 32.5 & 82.2 & 132.51 \\
+		ogbl-ppa & 24.4 & 29.65 & 94.6 & 132.75 \\
+		hollywood & 24.9 & 36.18 & 96.7 & 134.08 \\
+		pokec & 11.2 & 15.24 & 43.6 & 133.68 \\
+		ogbn-products & 20.6 & 26.8 & 79.9 & 133.98 \\
 		\hline
-		Geometric mean & 17.65 & 25.05 & 98.18 & 234.76 \\
+		Geometric mean & 16.64 & \textbf{24.5} & 64.55 & \textbf{124.6} \\
 		\hline
 	\end{tabular}
 	\caption{Performance comparison between HiSparse and our implementation, including throughput and bandwidth efficiency.}
+	\label{hisparse}
 \end{table}
 
 
@@ -715,15 +838,15 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 			\cline{2-3}
 			& \textbf{Serpens} & \textbf{Ours} \\
 			\hline
+			tsopf-rs-b2383 & 44.39 & 47.2 \\
+			mouse-gene & 42.26 & 42.52 \\
 			google-plus & 14.71 & 32.5 \\
 			ogbl-ppa & 42.26 & 29.65 \\
 			hollywood & 36.2 & 36.18 \\
 			pokec & 14.29 & 15.24 \\
 			ogbn-products & 39.9 & 26.8 \\
-			mouse-gene & 42.26 & 42.52 \\
-			tsopf-rs-b2383 & 44.39 & 47.2 \\
 			\hline
-			Geometric mean & 30.4 & 31.1 \\
+			Geometric mean & \textbf{30.41} & \textbf{31.17} \\
 			\hline
 		\end{tabular}
 		\caption{Performance comparison between Serpens and our implementation.}
@@ -742,13 +865,17 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 			tsopf-rs-b2383 & 47 & 47.2 \\
 			crankseg-2 & 50.6 & 43.6491 \\
 			\hline
-			Geometric mean & 44.87 & 44.1 \\
+			Geometric mean & \textbf{44.88} & \textbf{44.41} \\
 			\hline
 		\end{tabular}
-		\caption{Performance comparison between FCCM'23 and our implementation.}
-		\label{fccm}
+		\caption{Performance comparison between FCCM23 and our implementation.}
+		\label{fccm23}
 	\end{minipage}
 \end{table}
+
+We now focus on dense benchmarks results. Matrix sizes ranging between 1024 x 1024 to 16K x 16K are tested. We attempted to obtain the performance of HiSparse with such benchmarks. However, we could only successfully run the 1024 x 1024 benchmark. Table \ref{dense} shows the throughput comparison of our architecture, HiSparse, and the hipBLAS GPU library. Our accelerator achieves 2.6x higher throughput than HiSparse. In comparison to hipBLAS, we achieve 1.26x higher throughput. The table additionally report bandwidth efficiency for our implementation, where we achieve a geometric mean of 131.17. Although we were unable to measure the dense benchmarks results for the rest of the FPGA baselines, it is very much expected that they, similar to HiSparse, achieve lower throughput than ours. The reason for this is that their dataflow is optimized for sparse benchmarks. All of the baselines can receive at most 8 matrix elements per HBM channel at a time. In contrast, we can process 16 dense elements or 8 sparse elements. Additionally, many of the baselines depend on shuffling and routing the sparse elements to their corresponding vector banks. Such optimizations fit sparse benchmarks, but degrade the performance for dense benchmarks.
+
+
 
 \begin{table}[h!]
 	\centering
@@ -764,12 +891,16 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 		8192 x 8192 & - & 93 & 104.49 & 268 \\
 		16k x 16k & - & 105 & 107.74 & 268 \\
 		\hline
-		Geometric mean & - & - & 46.68 & 225.55 \\
+		Geometric mean & - & 48.33 & \textbf{61.24} & 131.17 \\
 		\hline
 	\end{tabular}
 	\caption{Performance comparison for dense matrix-vector multiplication between HiSparse, hipBLAS, and our implementation, including throughput and bandwidth efficiency.}
 	\label{dense}
 \end{table}
+
+In summary, we conclude that in terms of throughput and bandwidth efficiency, our architecture outperforms dedicated sparse accelerators, as well as several CPU and GPU libraries. In terms of FPGA resource utilization, Table \ref{resource_util} shows that the consumed resources by our architecture are comparable to the FPGA baselines, although our architecture supports optimization of both sparse and dense inputs. Finally, we examine the power and energy efficiency of the architectures. Table \ref{power_energy_efficiency}
+shows the measured power consumption and energy efficiency of MKL, cuSPARSE, HiSparse, Serpens, and our implementation. Our architecture is 48x and
+4.8x more energy-efficient than MKL and cuSPARSE. Additionally, our accelerator is 1.3x more energy-efficienct that HiSparse. Compared to Serpens, we achieve 76\% of its energy efficiency. 
 
 \begin{table}[h!]
 	\centering
@@ -802,13 +933,8 @@ a compressed Transformer \cite{transformer} model with a sparsity of x\%.
 \end{table}
 
 
-\section{Compiler Evaluation}
-\subsection{Setup}
-\subsubsection{User Code}
-\subsubsection{Baselines}
-\subsection{Detection}
-\subsection{Performance}
-\section{Discussion}
+
+
 %\section{Introduction}
 %ACM's consolidated article template, introduced in 2017, provides a
 %consistent \LaTeX\ style for use across ACM publications, and

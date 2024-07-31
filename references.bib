@@ -211,3 +211,64 @@ series = {CC 2023}
 	location = {Long Beach, California, USA},
 	series = {NIPS'17}
 }
+
+@article{Goto,
+	author = {Goto, Kazushige and Geijn, Robert A. van de},
+	title = {Anatomy of high-performance matrix multiplication},
+	year = {2008},
+	issue_date = {May 2008},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	volume = {34},
+	number = {3},
+	issn = {0098-3500},
+	url = {https://doi.org/10.1145/1356052.1356053},
+	doi = {10.1145/1356052.1356053},
+	abstract = {We present the basic principles that underlie the high-performance implementation of the matrix-matrix multiplication that is part of the widely used GotoBLAS library. Design decisions are justified by successively refining a model of architectures with multilevel memories. A simple but effective algorithm for executing this operation results. Implementations on a broad selection of architectures are shown to achieve near-peak performance.},
+	journal = {ACM Trans. Math. Softw.},
+	month = {may},
+	articleno = {12},
+	numpages = {25},
+	keywords = {Linear algebra, basic linear algebra subprogrms, matrix multiplication}
+}
+
+@article{STRASSEN1969,
+	author = {STRASSEN, V.},
+	journal = {Numerische Mathematik},
+	keywords = {numerical analysis},
+	pages = {354-356},
+	title = {Gaussian Elimination is not Optimal.},
+	url = {http://eudml.org/doc/131927},
+	volume = {13},
+	year = {1969},
+}
+
+@inproceedings{facc,
+	author = {Woodruff, Jackson and Armengol-Estap\'{e}, Jordi and Ainsworth, Sam and O'Boyle, Michael F. P.},
+	title = {Bind the gap: compiling real software to hardware FFT accelerators},
+	year = {2022},
+	isbn = {9781450392655},
+	publisher = {Association for Computing Machinery},
+	address = {New York, NY, USA},
+	url = {https://doi.org/10.1145/3519939.3523439},
+	doi = {10.1145/3519939.3523439},
+	abstract = {Specialized hardware accelerators continue to be a source of performance improvement. However, such specialization comes at a programming price. The fundamental issue is that of a mismatch between the diversity of user code and the functionality of fixed hardware, limiting its wider uptake. Here we focus on a particular set of accelerators: those for Fast Fourier Transforms. We present FACC (Fourier ACcelerator Compiler), a novel approach to automatically map legacy code to Fourier Transform accelerators. It automatically generates drop-in replacement adapters using Input-Output (IO)-based program synthesis that bridge the gap between user code and accelerators. We apply FACC to unmodified GitHub C programs of varying complexity and compare against two existing approaches. We target FACC  
+	to a high-performance library, FFTW, and two hardware accelerators, the NXP PowerQuad and the Analog Devices FFTA, and demonstrate mean speedups of 9x, 17x and 27x respectively},
+	booktitle = {Proceedings of the 43rd ACM SIGPLAN International Conference on Programming Language Design and Implementation},
+	pages = {687–702},
+	numpages = {16},
+	keywords = {FFT, hardware accelerator, program synthesis},
+	location = {San Diego, CA, USA},
+	series = {PLDI 2022}
+}
+
+@INPROCEEDINGS{tapa,
+	author={Chi, Yuze and Guo, Licheng and Lau, Jason and Choi, Young-kyu and Wang, Jie and Cong, Jason},
+	booktitle={2021 IEEE 29th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)}, 
+	title={Extending High-Level Synthesis for Task-Parallel Programs}, 
+	year={2021},
+	volume={},
+	number={},
+	pages={204-213},
+	keywords={Productivity;Semantics;C++ languages;Tools;Programming;Task analysis;Kernel},
+	doi={10.1109/FCCM51124.2021.00032}}

@@ -2,7 +2,7 @@
 %%% Do NOT edit. File created by BibTeX with style
 %%% ACM-Reference-Format-Journals [18-Jan-2012].
 
-\begin{thebibliography}{14}
+\begin{thebibliography}{18}
 
 %%% ====================================================================
 %%% NOTE TO THE USER: you can override these defaults by providing
@@ -49,6 +49,22 @@
 \newblock
 \urldef\tempurl%
 \url{https://doi.org/10.1109/HPEC43674.2020.9286214}
+\showDOI{\tempurl}
+
+
+\bibitem[Chi et~al\mbox{.}(2021)]%
+        {tapa}
+\bibfield{author}{\bibinfo{person}{Yuze Chi}, \bibinfo{person}{Licheng Guo},
+  \bibinfo{person}{Jason Lau}, \bibinfo{person}{Young-kyu Choi},
+  \bibinfo{person}{Jie Wang}, {and} \bibinfo{person}{Jason Cong}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Extending High-Level Synthesis for Task-Parallel
+  Programs}. In \bibinfo{booktitle}{\emph{2021 IEEE 29th Annual International
+  Symposium on Field-Programmable Custom Computing Machines (FCCM)}}.
+  \bibinfo{pages}{204--213}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1109/FCCM51124.2021.00032}
 \showDOI{\tempurl}
 
 
@@ -114,6 +130,21 @@
 \showISBNx{9781450349116}
 \urldef\tempurl%
 \url{https://doi.org/10.1145/3173162.3173182}
+\showDOI{\tempurl}
+
+
+\bibitem[Goto and Geijn(2008)]%
+        {Goto}
+\bibfield{author}{\bibinfo{person}{Kazushige Goto} {and}
+  \bibinfo{person}{Robert A. van~de Geijn}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \showarticletitle{Anatomy of high-performance matrix multiplication}.
+\newblock \bibinfo{journal}{\emph{ACM Trans. Math. Softw.}}
+  \bibinfo{volume}{34}, \bibinfo{number}{3}, Article \bibinfo{articleno}{12}
+  (\bibinfo{date}{may} \bibinfo{year}{2008}), \bibinfo{numpages}{25}~pages.
+\newblock
+\showISSN{0098-3500}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/1356052.1356053}
 \showDOI{\tempurl}
 
 
@@ -239,6 +270,20 @@
 \showDOI{\tempurl}
 
 
+\bibitem[STRASSEN(1969)]%
+        {STRASSEN1969}
+\bibfield{author}{\bibinfo{person}{V. STRASSEN}.}
+  \bibinfo{year}{1969}\natexlab{}.
+\newblock \showarticletitle{Gaussian Elimination is not Optimal.}
+\newblock \bibinfo{journal}{\emph{Numer. Math.}}  \bibinfo{volume}{13}
+  (\bibinfo{year}{1969}), \bibinfo{pages}{354--356}.
+\newblock
+\urldef\tempurl%
+\url{http://eudml.org/doc/131927}
+\showURL{%
+\tempurl}
+
+
 \bibitem[Vaswani et~al\mbox{.}(2017)]%
         {transformer}
 \bibfield{author}{\bibinfo{person}{Ashish Vaswani}, \bibinfo{person}{Noam
@@ -253,6 +298,24 @@
   Inc.}, \bibinfo{address}{Red Hook, NY, USA}, \bibinfo{pages}{6000–6010}.
 \newblock
 \showISBNx{9781510860964}
+
+
+\bibitem[Woodruff et~al\mbox{.}(2022)]%
+        {facc}
+\bibfield{author}{\bibinfo{person}{Jackson Woodruff}, \bibinfo{person}{Jordi
+  Armengol-Estap\'{e}}, \bibinfo{person}{Sam Ainsworth}, {and}
+  \bibinfo{person}{Michael F.~P. O'Boyle}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Bind the gap: compiling real software to hardware
+  FFT accelerators}. In \bibinfo{booktitle}{\emph{Proceedings of the 43rd ACM
+  SIGPLAN International Conference on Programming Language Design and
+  Implementation}} (San Diego, CA, USA) \emph{(\bibinfo{series}{PLDI 2022})}.
+  \bibinfo{publisher}{Association for Computing Machinery},
+  \bibinfo{address}{New York, NY, USA}, \bibinfo{pages}{687–702}.
+\newblock
+\showISBNx{9781450392655}
+\urldef\tempurl%
+\url{https://doi.org/10.1145/3519939.3523439}
+\showDOI{\tempurl}
 
 
 \bibitem[Xilinx(2021)]%

@@ -10,6 +10,7 @@ Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: references.bib
 Warning--I didn't find a database entry for "Shuhai"
 Warning--I didn't find a database entry for "9460576"
+Warning--I didn't find a database entry for "Vitis"
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
@@ -17,6 +18,8 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--empty publisher in gpu-dense
 Warning--empty address in gpu-dense
+Warning--empty publisher in tapa
+Warning--empty address in tapa
 Warning--empty publisher in cummins2021a
 Warning--empty address in cummins2021a
 Warning--page numbers missing in both pages and numpages fields in cummins2021a
@@ -28,45 +31,45 @@ Warning--empty publisher in graphlily
 Warning--empty address in graphlily
 Warning--empty publisher in fccm-spmv
 Warning--empty address in fccm-spmv
-You've used 14 entries,
+You've used 18 entries,
             5981 wiz_defined-function locations,
-            1596 strings with 22359 characters,
-and the built_in function-call counts, 17849 in all, are:
-= -- 2057
-> -- 716
+            1633 strings with 23355 characters,
+and the built_in function-call counts, 22719 in all, are:
+= -- 2694
+> -- 858
 < -- 0
-+ -- 245
-- -- 235
-* -- 1382
-:= -- 1741
-add.period$ -- 69
-call.type$ -- 14
-change.case$ -- 133
-chr.to.int$ -- 14
-cite$ -- 27
-duplicate$ -- 1583
-empty$ -- 1071
-format.name$ -- 287
-if$ -- 4265
++ -- 292
+- -- 286
+* -- 1720
+:= -- 2182
+add.period$ -- 89
+call.type$ -- 18
+change.case$ -- 162
+chr.to.int$ -- 18
+cite$ -- 33
+duplicate$ -- 2032
+empty$ -- 1381
+format.name$ -- 350
+if$ -- 5479
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 61
-newline$ -- 179
-num.names$ -- 98
-pop$ -- 644
+missing$ -- 78
+newline$ -- 224
+num.names$ -- 126
+pop$ -- 807
 preamble$ -- 1
-purify$ -- 245
+purify$ -- 306
 quote$ -- 0
-skip$ -- 637
+skip$ -- 808
 stack$ -- 0
-substring$ -- 1137
-swap$ -- 192
+substring$ -- 1502
+swap$ -- 246
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 393
-warning$ -- 13
-while$ -- 61
+type$ -- 485
+warning$ -- 15
+while$ -- 86
 width$ -- 0
-write$ -- 346
-(There were 15 warnings)
+write$ -- 438
+(There were 18 warnings)
