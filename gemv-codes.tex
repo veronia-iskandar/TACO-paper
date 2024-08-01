@@ -1,0 +1,123 @@
+\documentclass[manuscript,screen,review]{acmart}
+\documentclass{article}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{shapes, positioning}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+	frame=single,
+	columns=flexible,
+	keepspaces=false,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=1,
+	breaklines=true,
+	breakatwhitespace=true,
+	numbers=none,
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	backgroundcolor=\color{gray!10}, % Set background color
+	keywordstyle=\color{blue}, % Color keywords
+	commentstyle=\color{green}, % Color comments
+	stringstyle=\color{red}, % Color strings
+	morekeywords={__m256, _mm256_setzero_ps, _mm256_loadu_ps, _mm256_fmadd_ps, _mm256_storeu_ps}, % Additional keywords for AVX
+	escapeinside={(*}{*)}
+}
+
+\newcommand{\framedarg}[1]{
+	\tikz[baseline=(char.base)]
+	\node[draw=blue, rectangle, inner sep=1pt, anchor=base] (char) {#1};
+}
+
+\begin{document}
+	
+	\begin{figure}[h]
+		\centering
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\caption{Naive Matrix-Vector Multiplication}
+			\label{lst:naive}
+			\begin{lstlisting}[language=C]
+				void naive_mvm(float *(*\framedarg{A}*), float *(*\framedarg{x}*), float *(*\framedarg{y}*), int (*\framedarg{N}*)) {
+					for (int i = 0; i < (*\framedarg{N}*); ++i) {
+						(*\framedarg{y}*)[i] = 0;
+						for (int j = 0; j < (*\framedarg{N}*); ++j) {
+							(*\framedarg{y}*)[i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j] * (*\framedarg{x}*)[j];
+						}
+					}
+				}
+			\end{lstlisting}
+		\end{subfigure}
+		\hspace{1em}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\caption{Unrolled Matrix-Vector Multiplication}
+			\label{lst:unrolled}
+			\begin{lstlisting}[language=C]
+				void unrolled_mvm(float *(*\framedarg{A}*), float *(*\framedarg{x}*), float *(*\framedarg{y}*), int (*\framedarg{N}*)) {
+					for (int i = 0; i < (*\framedarg{N}*); ++i) {
+						(*\framedarg{y}*)[i] = 0;
+						for (int j = 0; j < (*\framedarg{N}*); j += 4) {
+							(*\framedarg{y}*)[i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j] * (*\framedarg{x}*)[j];
+							(*\framedarg{y}*)[i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j + 1] * (*\framedarg{x}*)[j + 1];
+							(*\framedarg{y}*)[i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j + 2] * (*\framedarg{x}*)[j + 2];
+							(*\framedarg{y}*)[i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j + 3] * (*\framedarg{x}*)[j + 3];
+						}
+					}
+				}
+			\end{lstlisting}
+		\end{subfigure}
+		\vspace{1em}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\caption{AVX Intrinsics Matrix-Vector Multiplication}
+			\label{lst:avx}
+			\begin{lstlisting}[language=C++]
+				#include <immintrin.h>
+				
+				void avx_mvm(float *(*\framedarg{A}*), float *(*\framedarg{x}*), float *(*\framedarg{y}*), float (*\framedarg{alpha}*), float (*\framedarg{beta}*), int (*\framedarg{lda}*), int (*\framedarg{N}*)) {
+					for (int i = 0; i < (*\framedarg{N}*); ++i) {
+						__m256 vec_y = _mm256_setzero_ps();
+						for (int j = 0; j < (*\framedarg{N}*); j += 8) {
+							__m256 vec_a = _mm256_loadu_ps(&(*\framedarg{A}*)[i * (*\framedarg{lda}*) + j]);
+							__m256 vec_x = _mm256_loadu_ps(&(*\framedarg{x}*)[j]);
+							vec_y = _mm256_fmadd_ps(vec_a, vec_x, vec_y);
+						}
+						(*\framedarg{y}*)[i] = (*\framedarg{beta}*) * (*\framedarg{y}*)[i];
+						float temp[8];
+						_mm256_storeu_ps(temp, vec_y);
+						for (int k = 0; k < 8; ++k) {
+							(*\framedarg{y}*)[i] += (*\framedarg{alpha}*) * temp[k];
+						}
+					}
+				}
+			\end{lstlisting}
+		\end{subfigure}
+		\hspace{1em}
+		\begin{subfigure}[t]{0.45\textwidth}
+			\centering
+			\caption{FPGA Accelerator Pass}
+			\label{lst:fpga}
+			\begin{lstlisting}[language=C++]
+				void fpga_gemv(float *(*\framedarg{A}*), float *(*\framedarg{x}*), float *(*\framedarg{y}*), float (*\framedarg{alpha}*), float (*\framedarg{beta}*), int (*\framedarg{lda}*), int (*\framedarg{N}*)) {
+					// Transfer data to FPGA
+					transfer_to_fpga((*\framedarg{A}*), (*\framedarg{x}*), (*\framedarg{y}*), (*\framedarg{alpha}*), (*\framedarg{beta}*), (*\framedarg{lda}*), (*\framedarg{N}*));
+					
+					// FPGA computation
+					start_fpga_computation();
+					
+					// Retrieve results from FPGA
+					retrieve_from_fpga((*\framedarg{y}*));
+				}
+			\end{lstlisting}
+		\end{subfigure}
+		\caption{Matrix-Vector Multiplication Implementations and FPGA Accelerator Pass}
+		\label{fig:mvm_fpga_implementations}
+	\end{figure}
+	
+\end{document}

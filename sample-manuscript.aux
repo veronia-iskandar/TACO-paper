@@ -13,55 +13,75 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2}Motivation}{1}{section.2}\protected@file@percent }
 \citation{kernelfarer}
 \citation{ATC}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{lst:naive}{{1a}{2}{Naive Matrix-Vector Multiplication}{figure.caption.2}{}}
+\newlabel{sub@lst:naive}{{a}{2}{Naive Matrix-Vector Multiplication}{figure.caption.2}{}}
+\newlabel{lst:unrolled}{{1b}{2}{Unrolled Matrix-Vector Multiplication}{figure.caption.2}{}}
+\newlabel{sub@lst:unrolled}{{b}{2}{Unrolled Matrix-Vector Multiplication}{figure.caption.2}{}}
+\newlabel{lst:avx}{{1c}{2}{AVX Intrinsics Matrix-Vector Multiplication}{figure.caption.2}{}}
+\newlabel{sub@lst:avx}{{c}{2}{AVX Intrinsics Matrix-Vector Multiplication}{figure.caption.2}{}}
+\newlabel{lst:fpga}{{1d}{2}{FPGA Accelerator Pass}{figure.caption.2}{}}
+\newlabel{sub@lst:fpga}{{d}{2}{FPGA Accelerator Pass}{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Matrix-Vector Multiplication Implementations and FPGA Accelerator Pass}}{2}{figure.caption.2}\protected@file@percent }
+\newlabel{fig:mvm_fpga_implementations}{{1}{2}{Matrix-Vector Multiplication Implementations and FPGA Accelerator Pass}{figure.caption.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Our Approach}{2}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Compiler}{2}{subsubsection.2.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}Profitability}{2}{subsubsection.2.1.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}Legality}{2}{subsubsection.2.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.4}Hardware}{2}{subsubsection.2.1.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{2}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Linear Algebra Code Matcher}{2}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Function Filtering}{2}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Input/Output Detection}{2}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Related Work}{3}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Linear Algebra Code Matcher}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Function Filtering}{3}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Input/Output Detection}{3}{subsection.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Variable Mapping}{3}{subsection.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of variables in GEMM and GEMV}}{3}{table.caption.2}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{variables}{{1}{3}{Comparison of variables in GEMM and GEMV}{table.caption.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Classifying operations between square matrices}{3}{subsubsection.4.3.1}\protected@file@percent }
-\newlabel{eq:mul}{{3}{3}{Classifying operations between square matrices}{equation.4.3}{}}
-\citation{static}
-\citation{ATC}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of variables in GEMM and GEMV}}{4}{table.caption.3}\protected@file@percent }
+\newlabel{variables}{{1}{4}{Comparison of variables in GEMM and GEMV}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Classifying operations between square matrices}{4}{subsubsection.4.3.1}\protected@file@percent }
+\newlabel{eq:mul}{{3}{4}{Classifying operations between square matrices}{equation.4.3}{}}
 \newlabel{eq:trace}{{5}{4}{Classifying operations between square matrices}{equation.4.5}{}}
 \newlabel{eq:trace_mul}{{6}{4}{Classifying operations between square matrices}{equation.4.6}{}}
 \newlabel{eq:operation}{{7}{4}{Classifying operations between square matrices}{equation.4.7}{}}
-\citation{Shuhai,9460576}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example SVG inclusion}}{5}{figure.caption.3}\protected@file@percent }
-\newlabel{fig:decision-tree}{{1}{5}{Example SVG inclusion}{figure.caption.3}{}}
+\citation{static}
+\citation{ATC}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example SVG inclusion}}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:decision-tree}{{2}{5}{Example SVG inclusion}{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Size Detection}{5}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Code Replacement}{5}{subsection.4.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Bandwidth for varying input sizes. (a) Sequential memory access. (b) MV.}}{6}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:example}{{2}{6}{Bandwidth for varying input sizes. (a) Sequential memory access. (b) MV}{figure.caption.4}{}}
+\citation{Shuhai,9460576}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Code Replacement}{6}{subsection.4.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {5}Offloading Profitability Prediction}{6}{section.5}\protected@file@percent }
 \newlabel{offloading-profitability}{{5}{6}{Offloading Profitability Prediction}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Matrix-Vector Multiplication Acceleration on FPGA-HBM}{6}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Custom Matrix Format}{6}{subsection.6.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Effect of varying (a) $AI_{CPU\rightarrow FPGA}$. (b) $Size_{in}$ on FPGA-HBM speedup over CPU.}}{7}{figure.caption.5}\protected@file@percent }
-\newlabel{thresholds}{{3}{7}{Effect of varying (a) $AI_{CPU\rightarrow FPGA}$. (b) $Size_{in}$ on FPGA-HBM speedup over CPU}{figure.caption.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Accelerator Architecture}{7}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Bandwidth for varying input sizes. (a) Sequential memory access. (b) MV.}}{7}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:example}{{3}{7}{Bandwidth for varying input sizes. (a) Sequential memory access. (b) MV}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Effect of varying (a) $AI_{CPU\rightarrow FPGA}$. (b) $Size_{in}$ on FPGA-HBM speedup over CPU.}}{7}{figure.caption.6}\protected@file@percent }
+\newlabel{thresholds}{{4}{7}{Effect of varying (a) $AI_{CPU\rightarrow FPGA}$. (b) $Size_{in}$ on FPGA-HBM speedup over CPU}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Matrix-Vector Multiplication Acceleration on FPGA-HBM}{7}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Custom Matrix Format}{7}{subsection.6.1}\protected@file@percent }
+\newlabel{fig:matrix-partition}{{5a}{8}{Figure A}{figure.caption.7}{}}
+\newlabel{sub@fig:matrix-partition}{{a}{8}{Figure A}{figure.caption.7}{}}
+\newlabel{fig:packets-channels}{{5b}{8}{Figure B}{figure.caption.7}{}}
+\newlabel{sub@fig:packets-channels}{{b}{8}{Figure B}{figure.caption.7}{}}
+\newlabel{fig:sparse-padding}{{5c}{8}{Figure C}{figure.caption.7}{}}
+\newlabel{sub@fig:sparse-padding}{{c}{8}{Figure C}{figure.caption.7}{}}
+\newlabel{fig:cluster-distribution}{{5d}{8}{Figure D}{figure.caption.7}{}}
+\newlabel{sub@fig:cluster-distribution}{{d}{8}{Figure D}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Main caption for all subfigures}}{8}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:main}{{5}{8}{Main caption for all subfigures}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Accelerator Architecture}{8}{subsection.6.2}\protected@file@percent }
 \citation{hisparse,fccm-spmv}
 \citation{hisparse}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example SVG inclusion}}{8}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:mat_format}{{4}{8}{Example SVG inclusion}{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example SVG inclusion}}{8}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:architecture}{{5}{8}{Example SVG inclusion}{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Matrix Loader}{8}{subsubsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Vector Read/Write Units}{8}{subsubsection.6.2.2}\protected@file@percent }
-\citation{hisparse,graphlily}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Example SVG inclusion}}{9}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:input-packets}{{6}{9}{Example SVG inclusion}{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Processing Elements with History Keeping}{9}{subsubsection.6.2.3}\protected@file@percent }
+\newlabel{fig:architecture}{{6}{9}{Example SVG inclusion}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Matrix Loader}{9}{subsubsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Vector Read/Write Units}{9}{subsubsection.6.2.2}\protected@file@percent }
+\citation{hisparse,graphlily}
+\newlabel{fig:matrix-partition}{{7a}{10}{Figure A}{figure.caption.9}{}}
+\newlabel{sub@fig:matrix-partition}{{a}{10}{Figure A}{figure.caption.9}{}}
+\newlabel{fig:packets-channels}{{7b}{10}{Figure B}{figure.caption.9}{}}
+\newlabel{sub@fig:packets-channels}{{b}{10}{Figure B}{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Main caption for all subfigures}}{10}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:vector-unit}{{7}{10}{Main caption for all subfigures}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.3}Processing Elements with History Keeping}{10}{subsubsection.6.2.3}\protected@file@percent }
 \citation{autobridge}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Example SVG inclusion}}{10}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:vector-unit}{{7}{10}{Example SVG inclusion}{figure.caption.9}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Example SVG inclusion}}{11}{figure.caption.10}\protected@file@percent }
 \newlabel{fig:pe}{{8}{11}{Example SVG inclusion}{figure.caption.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Example SVG inclusion}}{11}{figure.caption.11}\protected@file@percent }

@@ -51,6 +51,7 @@
 \usepackage{subcaption}
 \usepackage{tabularx}
 \usepackage{multirow}
+\usepackage{listings}
 \usepackage{standalone}
 \usepackage{pgfplots}
 \usepackage{csvsimple}
@@ -125,6 +126,36 @@
 
 %%
 %% end of the preamble, start of the body of the document source.
+
+\lstset{
+	basicstyle=\ttfamily\footnotesize,
+frame=none,
+	columns=flexible,
+	keepspaces=false,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=1,
+	breaklines=true,
+	breakatwhitespace=true,
+	numbers=none,
+	numberstyle=\tiny,
+	stepnumber=1,
+	numbersep=5pt,
+	backgroundcolor=\color{gray!5}, % Set background color
+	keywordstyle=\color{blue}, % Color keywords
+	commentstyle=\color{brown}, % Color comments
+	stringstyle=\color{red}, % Color strings
+	morekeywords={__m256, _mm256_setzero_ps, _mm256_loadu_ps, _mm256_fmadd_ps, _mm256_storeu_ps}, % Additional keywords for AVX
+	escapeinside={(*}{*)}
+}
+
+\newcommand{\framedarg}[1]{
+	\tikz[baseline=(char.base)]
+	\node[draw=green, rectangle, inner sep=1.5pt, anchor=base] (char) {#1};
+}
+
+
 \begin{document}
 
 %%
@@ -240,9 +271,95 @@
 
 % complex user code
 % sparse formats and dense matrices
-Several existing code matching and replacement tools rely on code structure to detect linear algebra patterns \cite{kernelfarer, IDL}. While such approaches fit well-structured naive implementations, they are prone to fail for more complex implementations. It is worth noting that that the goal of the matcher is to perform variable mapping as well as function detection. Performing such a task using a set of code patterns and constraints is extremely challenging for non-naive implementations, such as codes using AVX2 intrinsics as shown in Fig. \ref{}. Other approaches such as the ATC compiler \cite{ATC} rely on neural program classification \cite{cummins2021a} to get a set of candidate functions before examining their behavior using input/output analysis. The need for training makes extending the matcher to more function classes expensive, and makes the matching process dependent on the quality of the training data set.
+Several existing code matching and replacement tools rely on code structure to detect linear algebra patterns \cite{kernelfarer, IDL}. While such approaches fit well-structured naive implementations, they are prone to fail for more complex implementations. It is worth noting that that the goal of the matcher is to perform variable mapping as well as function detection. Performing such a task using a set of code patterns and constraints is extremely challenging for non-naive implementations, such as codes using AVX2 intrinsics as shown in Fig. \ref{fig:mvm_implementations}. Other approaches such as the ATC compiler \cite{ATC} rely on neural program classification \cite{cummins2021a} to get a set of candidate functions before examining their behavior using input/output analysis. The need for training makes extending the matcher to more function classes expensive, and makes the matching process dependent on the quality of the training data set.
 
 Mapping the software to a hardware accelerator additionally defines some requirements for the accelerator design. First, we cannot predict the size of the input beforehand. Second, we cannot know whether the input is sparse or dense. Therefore, it is crucial that the hardware supports varying sizes, and is additionally optimized for handling dense and sparse inputs. 
+
+	\begin{figure}[h]
+	\centering
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\caption{Naive Matrix-Vector Multiplication}
+		\label{lst:naive}
+		\begin{lstlisting}[language=C]
+			
+			for (int i = 0; i < N); ++i) {
+				y [i] = 0;
+				for (int j = 0; j < N; ++j) {
+					(*\framedarg{y}*)[i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j] * (*\framedarg{x}*)[j];
+				}
+			}
+			
+		\end{lstlisting}
+	\end{subfigure}
+	\hspace{1em}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\caption{Unrolled Matrix-Vector Multiplication}
+		\label{lst:unrolled}
+		\begin{lstlisting}[language=C]
+			
+			for (int i = 0; i < N; ++i) {
+				y [i] = 0;
+				for (int j = 0; j < (*\framedarg{N}*); j += 4) {
+					(*\framedarg{y}*) [i] += (*\framedarg{A}*)[i * (*\framedarg{N}*) + j] * (*\framedarg{x}*)[j];
+					y [i] += A [i * N + j + 1] * x [j + 1];
+					y [i] += A [i * N + j + 2] * x [j + 2];
+					y [i] += A [i * N + j + 3] * x [j + 3];
+				}
+			}
+			
+		\end{lstlisting}
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}[t]{0.45\textwidth}
+		\centering
+		\caption{AVX Intrinsics Matrix-Vector Multiplication}
+		\label{lst:avx}
+		\begin{lstlisting}[language=C++]
+			#include <immintrin.h>
+			
+			
+			for (int i = 0; i < N; ++i) {
+				__m256 vec_y = _mm256_setzero_ps();
+				for (int j = 0; j < (*\framedarg{N}*); j += 8) {
+					__m256 vec_a = _mm256_loadu_ps(&(*\framedarg{A}*)[i * (*\framedarg{lda}*) + j]);
+					__m256 vec_x = _mm256_loadu_ps(&(*\framedarg{x}*)[j]);
+					vec_y = _mm256_fmadd_ps(vec_a, vec_x, vec_y);
+				}
+				(*\framedarg{y}*)[i] = (*\framedarg{beta}*) * y [i];
+				float temp[8];
+				_mm256_storeu_ps(temp, vec_y);
+				for (int k = 0; k < 8; ++k) {
+					y [i] += (*\framedarg{alpha}*) * temp[k];
+				}
+			}
+			
+		\end{lstlisting}
+	\end{subfigure}
+    \hspace{1em}
+\begin{subfigure}[t]{0.45\textwidth}
+	\centering
+	\caption{FPGA Accelerator Pass}
+	\label{lst:fpga}
+	\begin{lstlisting}[language=C++]
+		void fpga_gemv(float *(*\framedarg{A}*), float *(*\framedarg{x}*), float *(*\framedarg{y}*), float (*\framedarg{alpha}*), float (*\framedarg{beta}*), int (*\framedarg{lda}*), int (*\framedarg{N}*)) {
+			// Transfer data to FPGA
+			transfer_to_fpga(A, x, y, alpha, beta, lda, N);
+			
+			// FPGA computation
+			start_fpga_computation();
+			
+			// Retrieve results from FPGA
+			retrieve_from_fpga(y);
+		}
+	\end{lstlisting}
+\end{subfigure}
+\caption{Matrix-Vector Multiplication Implementations and FPGA Accelerator Pass}
+\label{fig:mvm_fpga_implementations}
+\end{figure}
+
+
 
 Several recent works have explored SpMV acceleration on FPGA-HBM platforms \cite{hisparse, graphlily, fccm-spmv, serpens}. However, all those works are optimized for handling sparse matrices using well-known or customized sparse formats. While a dense matrix can be converted to a sparse format, such as CSR or CSC, such handling of a dense matrix would involve much unneeded overhead. First, the data required to be transferred to the accelerator is up to 3X that needed for a dense matrix. As an example, the CSR format defines three arrays: values, row pointers, and column pointers. For a sparse matrix, such a format makes sense due to the small number of non-zeros relative to the overall matrix size. For a dense matrix consisting solely of non-zeros, the three arrays invoke a large data transfer overhead. Additionally, several SpMV accelerators involve crossbars or NoCs to route matrix elements to their suitable vector banks. Such implementations cause performance overheads for dense matrices.
 
@@ -475,9 +592,35 @@ The pack size (how many streams to pack) is adaptive depending on whether the ma
 
 \begin{figure}[h]
 	\centering
-	\includesvg[width=\textwidth]{svg/tile-values.svg}
-	\caption{Example SVG inclusion}
-	\label{fig:mat_format}
+	\begin{subfigure}[b]{0.8\textwidth}
+		\centering
+		\includesvg[width=\textwidth]{svg/matrix-partition.svg}
+		\caption{Figure A}
+		\label{fig:matrix-partition}
+	\end{subfigure}
+	\vspace{1em} % Add some vertical space between figures
+	\begin{subfigure}[b]{0.8\textwidth}
+		\centering
+		\includesvg[width=\textwidth]{svg/packets-channels.svg}
+		\caption{Figure B}
+		\label{fig:packets-channels}
+	\end{subfigure}
+	\vspace{1em} % Add some vertical space between figures
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includesvg[width=\textwidth]{svg/sparse-padding.svg}
+		\caption{Figure C}
+		\label{fig:sparse-padding}
+	\end{subfigure}
+	\hspace{1em} % Add some horizontal space between figures
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includesvg[width=\textwidth]{svg/cluster-distribution.svg}
+		\caption{Figure D}
+		\label{fig:cluster-distribution}
+	\end{subfigure}
+	\caption{Main caption for all subfigures}
+	\label{fig:main}
 \end{figure}
 
 \subsection{Accelerator Architecture}
@@ -501,14 +644,9 @@ Eight processing elements are implemented per cluster. They perform the multipli
 \end{figure}
 
 \subsubsection{Matrix Loader}
-The matrix loader unit is responsible for unpacking the matrix after loading from HBM by restoring its row indices, and then passing the data to the vector read/write units. Given that we use the same dataflow and the same modules for both dense and sparse input matrices,  the matrix loader unit has to adapt the size of the sparse input to match that of the dense. More specifically, the ACPSR format enables the loading 16 dense matrix elements since the column information is discarded. Therefore, the matrix loader performs zero padding after every 2 sparse elements, such that it produces 16 elements to be passed to the vector units, similar to the dense elements. Fig. \ref{fig:input-packets} illustrates the padding operation.
+The matrix loader unit is responsible for unpacking the matrix after loading from HBM by restoring its row indices, and then passing the data to the vector read/write units. Given that we use the same dataflow and the same modules for both dense and sparse input matrices,  the matrix loader unit has to adapt the size of the sparse input to match that of the dense. More specifically, the ACPSR format enables the loading 16 dense matrix elements since the column information is discarded. Therefore, the matrix loader performs zero padding after every 2 sparse elements, such that it produces 16 elements to be passed to the vector units, similar to the dense elements. Fig. \ref{fig:sparse=padding} illustrates the padding operation.
 
-\begin{figure}[h]
-	\centering
-	\includesvg[width=\textwidth]{svg/input-packets.svg}
-	\caption{Example SVG inclusion}
-	\label{fig:input-packets}
-\end{figure}
+
 
 \subsubsection{Vector Read/Write Units}
 Each PE requires random accesses to the same input dense vector. Several solutions have been proposed in recent litarature, such as crossbars and shuffle units \cite{hisparse,fccm-spmv}, in order to grant every matrix element access to the vector bank it requires. However, such solution are not a good fit for GEMV, since they introduce an extra overhead. For instance, the shuffle unit in HiSparse \cite{hisparse} implements resending logic and a crossbar to manage vector bank accesses. For input payloads with the same target output lane, the unit only grants access to one payload in a round-robin manner. Since a dense matrix packet has elements with the same column index, this causes a performance degradation, in addition to the complexity of the design which affects clock frequency.
@@ -527,8 +665,20 @@ Each cluster packs 4 vector read/write units; hence each vector unit receives 4 
 
 \begin{figure}[h]
 	\centering
-	\includesvg[width=0.7\textwidth]{svg/vector-unit.svg}
-	\caption{Example SVG inclusion}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includesvg[width=\textwidth]{svg/vector-read-write.svg}
+		\caption{Figure A}
+		\label{fig:matrix-partition}
+	\end{subfigure}
+	\hspace{1em} % Add some vertical space between figures
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includesvg[width=\textwidth]{svg/vector-unit-out.svg}
+		\caption{Figure B}
+		\label{fig:packets-channels}
+	\end{subfigure}
+	\caption{Main caption for all subfigures}
 	\label{fig:vector-unit}
 \end{figure}
 
@@ -540,7 +690,7 @@ More specifically, we introduce a data structure, called the Most Recent Queue (
 % in figure we need to show PE 1 URAM
 \begin{figure}[h]
 	\centering
-	\includesvg[width=\textwidth]{svg/pe.svg}
+	\includesvg[width=0.8\textwidth]{svg/pe.svg}
 	\caption{Example SVG inclusion}
 	\label{fig:pe}
 \end{figure}
@@ -552,7 +702,7 @@ Similar to the vector buffer, index coalescing is used to fully utilize the URAM
 
 \begin{figure}[h]
 	\centering
-	\includesvg[width=\textwidth]{svg/dataflow.svg}
+	\includesvg[width=0.8\textwidth]{svg/dataflow.svg}
 	\caption{Example SVG inclusion}
 	\label{fig:pe}
 \end{figure}

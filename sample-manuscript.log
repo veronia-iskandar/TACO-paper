@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.13)  31 JUL 2024 14:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.13)  1 AUG 2024 18:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -869,6 +869,34 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@dima=\skip80
 \bigstrutjot=\dimen268
 )
+(/usr/local/share/miktex-texmf/tex/latex/listings/listings.sty
+\lst@mode=\count328
+\lst@gtempboxa=\box66
+\lst@token=\toks49
+\lst@length=\count329
+\lst@currlwidth=\dimen269
+\lst@column=\count330
+\lst@pos=\count331
+\lst@lostspace=\dimen270
+\lst@width=\dimen271
+\lst@newlines=\count332
+\lst@lineno=\count333
+\lst@maxwidth=\dimen272
+
+(/usr/local/share/miktex-texmf/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/03/11 1.10a (Carsten Heinz)
+)
+(/usr/local/share/miktex-texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
+\c@lstnumber=\count334
+\lst@skipnumbers=\count335
+\lst@framebox=\box67
+)
+(/usr/local/share/miktex-texmf/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/03/11 1.10a listings configuration
+))
+Package: listings 2024/03/11 1.10a (Carsten Heinz)
+
 (/usr/local/share/miktex-texmf/tex/latex/standalone/standalone.sty
 Package: standalone 2022/10/10 v1.3b Package to include TeX sub-files with prea
 mbles
@@ -883,7 +911,7 @@ Package: filehook 2022/10/25 v0.8b Hooks for input files
 (/home/veronia/.miktex/texmfs/install/tex/latex/filehook/filehook-2020.sty
 Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
 ))
-\c@currfiledepth=\count328
+\c@currfiledepth=\count336
 )
 (/home/veronia/.miktex/texmfs/install/tex/latex/gincltex/gincltex.sty
 (/home/veronia/.miktex/texmfs/install/tex/latex/svn-prov/svn-prov.sty
@@ -903,38 +931,38 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box66
+\collectedbox=\box68
 )
-\tc@llx=\dimen269
-\tc@lly=\dimen270
-\tc@urx=\dimen271
-\tc@ury=\dimen272
+\tc@llx=\dimen273
+\tc@lly=\dimen274
+\tc@urx=\dimen275
+\tc@ury=\dimen276
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen273
-\adjbox@Height=\dimen274
-\adjbox@Depth=\dimen275
-\adjbox@Totalheight=\dimen276
-\adjbox@pwidth=\dimen277
-\adjbox@pheight=\dimen278
-\adjbox@pdepth=\dimen279
-\adjbox@ptotalheight=\dimen280
+\adjbox@Width=\dimen277
+\adjbox@Height=\dimen278
+\adjbox@Depth=\dimen279
+\adjbox@Totalheight=\dimen280
+\adjbox@pwidth=\dimen281
+\adjbox@pheight=\dimen282
+\adjbox@pdepth=\dimen283
+\adjbox@ptotalheight=\dimen284
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count329
+\c@checkoddpage=\count337
 )
 (/home/veronia/.miktex/texmfs/install/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box67
-\sift@deathcycles=\count330
-\@vwid@loff=\dimen281
-\@vwid@roff=\dimen282
+\@vwid@box=\box69
+\sift@deathcycles=\count338
+\@vwid@loff=\dimen285
+\@vwid@roff=\dimen286
 ))
-\gincltex@box=\box68
+\gincltex@box=\box70
 )
 (/home/veronia/.miktex/texmfs/install/tex/latex/filemod/filemod-expmin.sty
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
@@ -955,12 +983,12 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen283
-\pgfmath@count=\count331
-\pgfmath@box=\box69
-\pgfmath@toks=\toks49
-\pgfmath@stack@operand=\toks50
-\pgfmath@stack@operation=\toks51
+\pgfmath@dimen=\dimen287
+\pgfmath@count=\count339
+\pgfmath@box=\box71
+\pgfmath@toks=\toks50
+\pgfmath@stack@operand=\toks51
+\pgfmath@stack@operation=\toks52
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -981,58 +1009,58 @@ tex)
 thmetics.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count332
+\c@pgfmathroundto@lastzeros=\count340
 ))
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen284
-\pgf@picmaxx=\dimen285
-\pgf@picminy=\dimen286
-\pgf@picmaxy=\dimen287
-\pgf@pathminx=\dimen288
-\pgf@pathmaxx=\dimen289
-\pgf@pathminy=\dimen290
-\pgf@pathmaxy=\dimen291
-\pgf@xx=\dimen292
-\pgf@xy=\dimen293
-\pgf@yx=\dimen294
-\pgf@yy=\dimen295
-\pgf@zx=\dimen296
-\pgf@zy=\dimen297
+\pgf@picminx=\dimen288
+\pgf@picmaxx=\dimen289
+\pgf@picminy=\dimen290
+\pgf@picmaxy=\dimen291
+\pgf@pathminx=\dimen292
+\pgf@pathmaxx=\dimen293
+\pgf@pathminy=\dimen294
+\pgf@pathmaxy=\dimen295
+\pgf@xx=\dimen296
+\pgf@xy=\dimen297
+\pgf@yx=\dimen298
+\pgf@yy=\dimen299
+\pgf@zx=\dimen300
+\pgf@zy=\dimen301
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen298
-\pgf@path@lasty=\dimen299
+\pgf@path@lastx=\dimen302
+\pgf@path@lasty=\dimen303
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen300
-\pgf@shorten@start@additional=\dimen301
+\pgf@shorten@end@additional=\dimen304
+\pgf@shorten@start@additional=\dimen305
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box70
-\pgf@hbox=\box71
-\pgf@layerbox@main=\box72
-\pgf@picture@serial@count=\count333
+\pgfpic=\box72
+\pgf@hbox=\box73
+\pgf@layerbox@main=\box74
+\pgf@picture@serial@count=\count341
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen302
+\pgflinewidth=\dimen306
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen303
-\pgf@pt@y=\dimen304
-\pgf@pt@temp=\dimen305
+\pgf@pt@x=\dimen307
+\pgf@pt@y=\dimen308
+\pgf@pt@temp=\dimen309
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -1048,13 +1076,13 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen306
+\pgfarrowsep=\dimen310
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen307
-\pgf@sys@shading@range@num=\count334
-\pgf@shadingcount=\count335
+\pgf@max=\dimen311
+\pgf@sys@shading@range@num=\count342
+\pgf@shadingcount=\count343
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -1062,7 +1090,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box73
+\pgfexternal@startupbox=\box75
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -1081,15 +1109,15 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/local/share/miktex-texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box74
+\pgfnodeparttextbox=\box76
 ) (/usr/local/share/miktex-texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (/usr/local/share/miktex-texmf/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen308
-\pgf@nodesepend=\dimen309
+\pgf@nodesepstart=\dimen312
+\pgf@nodesepend=\dimen313
 )
 (/usr/local/share/miktex-texmf/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1101,10 +1129,10 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/local/share/miktex-texmf/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen310
-\pgffor@skip=\dimen311
-\pgffor@stack=\toks52
-\pgffor@toks=\toks53
+\pgffor@iter=\dimen314
+\pgffor@skip=\dimen315
+\pgffor@stack=\toks53
+\pgffor@toks=\toks54
 ))
 (/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -1112,33 +1140,33 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/share/miktex-texmf/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count336
-\pgfplotmarksize=\dimen312
+\pgf@plot@mark@count=\count344
+\pgfplotmarksize=\dimen316
 )
-\tikz@lastx=\dimen313
-\tikz@lasty=\dimen314
-\tikz@lastxsaved=\dimen315
-\tikz@lastysaved=\dimen316
-\tikz@lastmovetox=\dimen317
-\tikz@lastmovetoy=\dimen318
-\tikzleveldistance=\dimen319
-\tikzsiblingdistance=\dimen320
-\tikz@figbox=\box75
-\tikz@figbox@bg=\box76
-\tikz@tempbox=\box77
-\tikz@tempbox@bg=\box78
-\tikztreelevel=\count337
-\tikznumberofchildren=\count338
-\tikznumberofcurrentchild=\count339
-\tikz@fig@count=\count340
+\tikz@lastx=\dimen317
+\tikz@lasty=\dimen318
+\tikz@lastxsaved=\dimen319
+\tikz@lastysaved=\dimen320
+\tikz@lastmovetox=\dimen321
+\tikz@lastmovetoy=\dimen322
+\tikzleveldistance=\dimen323
+\tikzsiblingdistance=\dimen324
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count345
+\tikznumberofchildren=\count346
+\tikznumberofcurrentchild=\count347
+\tikz@fig@count=\count348
 
 (/usr/local/share/miktex-texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count341
-\pgfmatrixcurrentcolumn=\count342
-\pgf@matrix@numberofcolumns=\count343
+\pgfmatrixcurrentrow=\count349
+\pgfmatrixcurrentcolumn=\count350
+\pgf@matrix@numberofcolumns=\count351
 )
-\tikz@expandcount=\count344
+\tikz@expandcount=\count352
 
 (/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1146,12 +1174,12 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks54
-\t@pgfplots@tokb=\toks55
-\t@pgfplots@tokc=\toks56
-\pgfplots@tmpa=\dimen321
-\c@pgfplots@coordindex=\count345
-\c@pgfplots@scanlineindex=\count346
+\t@pgfplots@toka=\toks55
+\t@pgfplots@tokb=\toks56
+\t@pgfplots@tokc=\toks57
+\pgfplots@tmpa=\dimen325
+\c@pgfplots@coordindex=\count353
+\c@pgfplots@scanlineindex=\count354
 
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -1162,9 +1190,9 @@ gfsupp_loader.code.tex
 (/usr/local/share/miktex-texmf/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
 )
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks57
-\t@pgf@tokb=\toks58
-\t@pgf@tokc=\toks59
+\t@pgf@toka=\toks58
+\t@pgf@tokb=\toks59
+\t@pgf@tokc=\toks60
 
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
 gfsupp_pgfutil-common-lists.tex))
@@ -1175,14 +1203,14 @@ tructure.code.tex)
 tructureext.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count347
+\c@pgfplotsarray@tmp=\count355
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count348
-\t@pgfplotstable@a=\toks60
+\c@pgfplotstable@counta=\count356
+\t@pgfplotstable@a=\toks61
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/liststructure/pgfplotsdeque
 .code.tex)
@@ -1194,7 +1222,7 @@ de.tex))
 .tex)
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count349
+\c@pgfplotslibrarysurf@no=\count357
 
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
 shading.pgfsys-pdftex.def)))
@@ -1221,16 +1249,16 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/local/share/miktex-texmf/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen322
-\pgfdecoratedremainingdistance=\dimen323
-\pgfdecoratedinputsegmentcompleteddistance=\dimen324
-\pgfdecoratedinputsegmentremainingdistance=\dimen325
-\pgf@decorate@distancetomove=\dimen326
-\pgf@decorate@repeatstate=\count350
-\pgfdecorationsegmentamplitude=\dimen327
-\pgfdecorationsegmentlength=\dimen328
+\pgfdecoratedcompleteddistance=\dimen326
+\pgfdecoratedremainingdistance=\dimen327
+\pgfdecoratedinputsegmentcompleteddistance=\dimen328
+\pgfdecoratedinputsegmentremainingdistance=\dimen329
+\pgf@decorate@distancetomove=\dimen330
+\pgf@decorate@repeatstate=\count358
+\pgfdecorationsegmentamplitude=\dimen331
+\pgfdecorationsegmentlength=\dimen332
 )
-\tikz@lib@dec@box=\box79
+\tikz@lib@dec@box=\box81
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.pathmorphing.code.tex
@@ -1242,13 +1270,13 @@ zlibrarydecorations.pathreplacing.code.tex
 decorations.pathreplacing.code.tex))
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
 ntourlua.code.tex)
-\pgfplots@numplots=\count351
-\pgfplots@xmin@reg=\dimen329
-\pgfplots@xmax@reg=\dimen330
-\pgfplots@ymin@reg=\dimen331
-\pgfplots@ymax@reg=\dimen332
-\pgfplots@zmin@reg=\dimen333
-\pgfplots@zmax@reg=\dimen334
+\pgfplots@numplots=\count359
+\pgfplots@xmin@reg=\dimen333
+\pgfplots@xmax@reg=\dimen334
+\pgfplots@ymin@reg=\dimen335
+\pgfplots@ymax@reg=\dimen336
+\pgfplots@zmin@reg=\dimen337
+\pgfplots@zmax@reg=\dimen338
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -1264,9 +1292,9 @@ Package: csvsimple 2024/05/16 v2.6.1 LaTeX CSV file processing
 (/home/veronia/.miktex/texmfs/install/tex/latex/csvsimple/csvsimple-legacy.sty
 Package: csvsimple-legacy 2024/05/16 version 2.6.1 LaTeX2e CSV file processing
 \csv@file=\read4
-\c@csvinputline=\count352
-\c@csvrow=\count353
-\c@csvcol=\count354
+\c@csvinputline=\count360
+\c@csvrow=\count361
+\c@csvcol=\count362
 \csv@out=\write5
 )
 (/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tik
@@ -1295,77 +1323,89 @@ Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
 ype.code.tex)))
 (/usr/local/share/miktex-texmf/tex/generic/pgfplots/libs/tikzlibrarypgfplots.gr
 oupplots.code.tex
-\pgfplots@group@current@plot=\count355
-\pgfplots@group@current@row=\count356
-\pgfplots@group@current@column=\count357
+\pgfplots@group@current@plot=\count363
+\pgfplots@group@current@row=\count364
+\pgfplots@group@current@column=\count365
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 128.
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 128
+Package hyperref Info: Option `colorlinks' set `true' on input line 159.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 159
 .
-\c@theorem=\count358
+\c@theorem=\count366
  Include comment 'screenonly' Excluding comment 'printonly'
 Include comment 'anonsuppress'
 (/usr/local/share/miktex-texmf/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count359
-\l__pdf_internal_box=\box80
+\l__color_backend_stack_int=\count367
+\l__pdf_internal_box=\box82
 )
 (sample-manuscript.aux
+
+LaTeX Warning: Label `fig:matrix-partition' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:matrix-partition' multiply defined.
+
+
+LaTeX Warning: Label `fig:packets-channels' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:packets-channels' multiply defined.
+
 
 LaTeX Warning: Label `fig:pe' multiply defined.
 
 )
 \openout1 = `sample-manuscript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 128.
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 159.
 LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
- 128.
+ 159.
  (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/omlnxlmi.fd
 File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
 )
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 159.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-128.
+159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 159.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 128.
+ 159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 159.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 128.
+e 159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    ... okay on input line 159.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 128.
+(Font)              scaled to size 7.0pt on input line 159.
 LaTeX Font Info:    Trying to load font information for OT1+LinuxLibertineT-TLF
- on input line 128.
+ on input line 159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/libertine/OT1LinuxLibertineT-TL
 F.fd
@@ -1373,84 +1413,84 @@ File: OT1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for OT1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 <<ot1.cmap>>
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 <<oml.cmap>>
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 5.5pt on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.5pt on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.5pt on input line 128.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 128
+(Font)              scaled to size 5.5pt on input line 159.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 159
 .
 
 (/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 128
+LaTeX Font Info:    Trying to load font information for U+msb on input line 159
 .
 
 (/usr/local/share/miktex-texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-128.
+159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.5pt on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-128.
+159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.5pt on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-128.
+159.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.5pt on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.3pt on input line 128.
+(Font)              scaled to size 7.3pt on input line 159.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.5pt on input line 128.
-LaTeX Info: Command `\dddot' is already robust on input line 128.
-LaTeX Info: Command `\ddddot' is already robust on input line 128.
-LaTeX Info: Redefining \microtypecontext on input line 128.
-Package microtype Info: Applying patch `item' on input line 128.
-Package microtype Info: Applying patch `toc' on input line 128.
-Package microtype Info: Applying patch `eqnum' on input line 128.
-Package microtype Info: Applying patch `footnote' on input line 128.
-Package microtype Info: Applying patch `verbatim' on input line 128.
+(Font)              scaled to size 5.5pt on input line 159.
+LaTeX Info: Command `\dddot' is already robust on input line 159.
+LaTeX Info: Command `\ddddot' is already robust on input line 159.
+LaTeX Info: Redefining \microtypecontext on input line 159.
+Package microtype Info: Applying patch `item' on input line 159.
+Package microtype Info: Applying patch `toc' on input line 159.
+Package microtype Info: Applying patch `eqnum' on input line 159.
+Package microtype Info: Applying patch `footnote' on input line 159.
+Package microtype Info: Applying patch `verbatim' on input line 159.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 128.
+LaTeX Info: Redefining \showhyphens on input line 159.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1458,7 +1498,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 128.
+Package hyperref Info: Link coloring ON on input line 159.
 
 (sample-manuscript.out) (sample-manuscript.out)
 \@outlinefile=\write6
@@ -1467,17 +1507,17 @@ Package hyperref Info: Link coloring ON on input line 128.
 
 (/usr/local/share/miktex-texmf/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count360
-\scratchdimen=\dimen335
-\scratchbox=\box81
-\nofMPsegments=\count361
-\nofMParguments=\count362
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count363
-\MPscratchDim=\dimen336
-\MPnumerator=\count364
-\makeMPintoPDFobject=\count365
-\everyMPtoPDFconversion=\toks62
+\scratchcounter=\count368
+\scratchdimen=\dimen339
+\scratchbox=\box83
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks62
+\MPscratchCnt=\count371
+\MPscratchDim=\dimen340
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks63
 ) (/usr/local/share/miktex-texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1520,27 +1560,29 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count366
-\c@mv@boldtabular=\count367
+\c@mv@tabular=\count374
+\c@mv@boldtabular=\count375
 (/home/veronia/.miktex/texmfs/install/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count376
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 128.
+ on input line 159.
 
 Excluding 'CCSXML' comment.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 236.
+(Font)              scaled to size 12.0pt on input line 267.
 LaTeX Font Info:    Trying to load font information for T1+LinuxBiolinumT-TLF o
-n input line 236.
+n input line 267.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/libertine/T1LinuxBiolinumT-TLF.
 fd
@@ -1548,45 +1590,45 @@ File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 236.
+(Font)              scaled to size 12.0pt on input line 267.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 236.
+(Font)              scaled to size 12.0pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
  (/home/veronia/.miktex/texmfs/install/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
@@ -1594,31 +1636,31 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.95pt on input line 236.
+(Font)              scaled to size 10.95pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.1pt on input line 236.
+(Font)              scaled to size 6.1pt on input line 267.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxBiolinumT-TLF 
-on input line 236.
+on input line 267.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/libertine/TS1LinuxBiolinumT-TLF
 .fd
@@ -1626,17 +1668,17 @@ File: TS1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/L
 inuxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 236.
+(Font)              scaled to size 9.0pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 236.
+(Font)              scaled to size 5.5pt on input line 267.
 LaTeX Font Info:    Trying to load font information for TS1+LinuxLibertineT-TLF
- on input line 236.
+ on input line 267.
 
 (/home/veronia/.miktex/texmfs/install/tex/latex/libertine/TS1LinuxLibertineT-TL
 F.fd
@@ -1644,51 +1686,84 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 5.5pt on input line 236.
+(Font)              scaled to size 5.5pt on input line 267.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 236.
+(Font)              scaled to size 7.0pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 236.
+(Font)              scaled to size 6.2pt on input line 267.
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 236.
+(Font)              scaled to size 8.0pt on input line 267.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 238.
+(Font)              scaled to size 9.0pt on input line 269.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 243.
+(Font)              scaled to size 9.0pt on input line 274.
 
 
-LaTeX Warning: Reference `' on page 1 undefined on input line 243.
+LaTeX Warning: Reference `fig:mvm_implementations' on page 1 undefined on input
+ line 274.
+
+LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 282.
+(/usr/local/share/miktex-texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/03/11 1.10a listings language file
+)
+(/usr/local/share/miktex-texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
+)
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 28
+4.
+
+(/home/veronia/.miktex/texmfs/install/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
+)
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 9.0pt on input line 284.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zi4' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 7.0pt on input line 284.
+
+(/usr/local/share/miktex-texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/03/11 1.10a listings language file
+)
+
+Class acmart Warning: A possible image without description on input line 360.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 250.
+(Font)              scaled to size 9.0pt on input line 367.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 251.
+(Font)              scaled to size 6.0pt on input line 368.
 [1.1{/home/veronia/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/veron
 ia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_76gpa5.enc}{/home/vero
 nia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_25tcsq.enc}{/home/ver
@@ -1696,33 +1771,39 @@ onia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_afusau.enc}{/home/ve
 ronia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_naooyc.enc}{/home/v
 eronia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_nh77jq.enc}{/home/
 veronia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
-[2.2]
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [2.2{/home/veronia/.miktex/texmfs/install/fonts/enc/dvips/inconsolata/i4-t1-4.
+enc}]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `OML/nxlmi/m/it' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 9.0pt on input line 280.
+(Font)              scaled to size 9.0pt on input line 397.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 9.0pt on input line 280.
-LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 313.
- [3.3{/home/veronia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_oexx6
-f.enc}]
+(Font)              scaled to size 9.0pt on input line 397.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3.3{/home/veronia/.miktex/texmfs/install/fonts/enc/dvips/libertine/lbtn_oexx6f
+.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.3pt on input line 341.
+(Font)              scaled to size 7.3pt on input line 458.
+ [4.4]
 Package svg Info: Last page of `./svg-inkscape/decision-tree_svg-tex.pdf' is 1 
-on input line 408.
+on input line 525.
  (svg-inkscape/decision-tree_svg-tex.pdf_tex
-<./svg-inkscape/decision-tree_svg-tex.pdf, id=172, page=1, 351.93985pt x 266.11
+<./svg-inkscape/decision-tree_svg-tex.pdf, id=234, page=1, 351.93985pt x 266.11
 922pt>
 File: ./svg-inkscape/decision-tree_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/decision-tree_svg-tex.pdf, page 1>
@@ -1731,181 +1812,218 @@ on input line 56.
 (pdftex.def)             Requested size: 175.96991pt x 133.05927pt.
 )
 
-Class acmart Warning: A possible image without description on input line 411.
+Class acmart Warning: A possible image without description on input line 528.
+
+[5.5 <./svg-inkscape/decision-tree_svg-tex.pdf>]
+
+LaTeX Warning: Reference `autodok' on page 6 undefined on input line 548.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 2781) has occurred while \output is active []
-
- [4.4]
-
-LaTeX Warning: Reference `autodok' on page 5 undefined on input line 431.
-
-
-Package natbib Warning: Citation `Shuhai' on page 5 undefined on input line 431
+Package natbib Warning: Citation `Shuhai' on page 6 undefined on input line 548
 .
 
 
-Package natbib Warning: Citation `9460576' on page 5 undefined on input line 43
-1.
+Package natbib Warning: Citation `9460576' on page 6 undefined on input line 54
+8.
 
-
-Underfull \vbox (badness 2635) has occurred while \output is active []
-
- [5.5 <./svg-inkscape/decision-tree_svg-tex.pdf>]
-<pdf/seq_BW.pdf, id=206, 119.28847pt x 85.02502pt>
+<pdf/seq_BW.pdf, id=256, 119.28847pt x 85.02502pt>
 File: pdf/seq_BW.pdf Graphic file (type pdf)
 <use pdf/seq_BW.pdf>
-Package pdftex.def Info: pdf/seq_BW.pdf  used on input line 437.
+Package pdftex.def Info: pdf/seq_BW.pdf  used on input line 554.
 (pdftex.def)             Requested size: 187.89914pt x 133.93584pt.
-<pdf/mv_BW.pdf, id=207, 127.14548pt x 85.7309pt>
+<pdf/mv_BW.pdf, id=257, 127.14548pt x 85.7309pt>
 File: pdf/mv_BW.pdf Graphic file (type pdf)
 <use pdf/mv_BW.pdf>
-Package pdftex.def Info: pdf/mv_BW.pdf  used on input line 439.
+Package pdftex.def Info: pdf/mv_BW.pdf  used on input line 556.
 (pdftex.def)             Requested size: 187.89914pt x 126.69919pt.
 
+Class acmart Warning: A possible image without description on input line 559.
 
-Class acmart Warning: A possible image without description on input line 442.
-
-<pdf/AI.pdf, id=210, 216.81pt x 151.767pt>
+<pdf/AI.pdf, id=260, 216.81pt x 151.767pt>
 File: pdf/AI.pdf Graphic file (type pdf)
 <use pdf/AI.pdf>
-Package pdftex.def Info: pdf/AI.pdf  used on input line 452.
+Package pdftex.def Info: pdf/AI.pdf  used on input line 569.
 (pdftex.def)             Requested size: 187.89914pt x 131.536pt.
-<pdf/in.pdf, id=211, 216.81pt x 151.767pt>
+<pdf/in.pdf, id=261, 216.81pt x 151.767pt>
 File: pdf/in.pdf Graphic file (type pdf)
 <use pdf/in.pdf>
-Package pdftex.def Info: pdf/in.pdf  used on input line 454.
+Package pdftex.def Info: pdf/in.pdf  used on input line 571.
 (pdftex.def)             Requested size: 187.89914pt x 131.536pt.
 
-Class acmart Warning: A possible image without description on input line 457.
+Class acmart Warning: A possible image without description on input line 574.
 
-[6.6 <./pdf/seq_BW.pdf> <./pdf/mv_BW.pdf
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6.6]
+
+LaTeX Warning: Reference `fig:mat_format' on page 7 undefined on input line 582
+.
+
+[7.7 <./pdf/seq_BW.pdf> <./pdf/mv_BW.pdf
 
 pdfTeX warning: pdflatex (file ./pdf/mv_BW.pdf): PDF inclusion: multiple pdfs w
 ith page group included in a single page
->]
-Package svg Info: Last page of `./svg-inkscape/tile-values_svg-tex.pdf' is 1 on
- input line 478.
- (svg-inkscape/tile-values_svg-tex.pdf_tex
-<./svg-inkscape/tile-values_svg-tex.pdf, id=291, page=1, 1075.76906pt x 431.361
-56pt>
-File: ./svg-inkscape/tile-values_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/tile-values_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/tile-values_svg-tex.pdf , page1 used on
- input line 56.
-(pdftex.def)             Requested size: 469.75502pt x 188.36478pt.
-)
+> <./pdf/AI.pdf
 
-Class acmart Warning: A possible image without description on input line 481.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package svg Info: Last page of `./svg-inkscape/spmv-paper_svg-tex.pdf' is 1 on 
-input line 498.
-(svg-inkscape/spmv-paper_svg-tex.pdf_tex
-<./svg-inkscape/spmv-paper_svg-tex.pdf, id=294, page=1, 723.45282pt x 317.68687
-pt>
-File: ./svg-inkscape/spmv-paper_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/spmv-paper_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/spmv-paper_svg-tex.pdf , page1 used on 
-input line 56.
-(pdftex.def)             Requested size: 469.75502pt x 206.28072pt.
-)
-
-Class acmart Warning: A possible image without description on input line 501.
-
-[7.7 <./pdf/AI.pdf> <./pdf/in.pdf
+pdfTeX warning: pdflatex (file ./pdf/AI.pdf): PDF inclusion: multiple pdfs with
+ page group included in a single page
+> <./pdf/in.pdf
 
 pdfTeX warning: pdflatex (file ./pdf/in.pdf): PDF inclusion: multiple pdfs with
  page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/input-packets_svg-tex.pdf' is 1 
-on input line 508.
- (svg-inkscape/input-packets_svg-tex.pdf_tex
-<./svg-inkscape/input-packets_svg-tex.pdf, id=353, page=1, 609.77812pt x 188.20
-313pt>
-File: ./svg-inkscape/input-packets_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/input-packets_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/input-packets_svg-tex.pdf , page1 used 
-on input line 56.
-(pdftex.def)             Requested size: 469.75502pt x 144.9915pt.
+Package svg Info: Last page of `./svg-inkscape/matrix-partition_svg-tex.pdf' is
+ 1 on input line 597.
+ (svg-inkscape/matrix-partition_svg-tex.pdf_tex
+<./svg-inkscape/matrix-partition_svg-tex.pdf, id=393, page=1, 1040.38687pt x 51
+5.67656pt>
+File: ./svg-inkscape/matrix-partition_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/matrix-partition_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/matrix-partition_svg-tex.pdf , page1 us
+ed on input line 56.
+(pdftex.def)             Requested size: 375.80544pt x 186.26503pt.
+)
+Package svg Info: Last page of `./svg-inkscape/packets-channels_svg-tex.pdf' is
+ 1 on input line 604.
+
+(svg-inkscape/packets-channels_svg-tex.pdf_tex
+<./svg-inkscape/packets-channels_svg-tex.pdf, id=395, page=1, 1163.47173pt x 29
+7.36093pt>
+File: ./svg-inkscape/packets-channels_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/packets-channels_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/packets-channels_svg-tex.pdf , page1 us
+ed on input line 56.
+(pdftex.def)             Requested size: 375.80544pt x 96.04675pt.
+)
+Package svg Info: Last page of `./svg-inkscape/sparse-padding_svg-tex.pdf' is 1
+ on input line 611.
+
+(svg-inkscape/sparse-padding_svg-tex.pdf_tex
+<./svg-inkscape/sparse-padding_svg-tex.pdf, id=397, page=1, 482.92921pt x 61.35
+422pt>
+File: ./svg-inkscape/sparse-padding_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/sparse-padding_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/sparse-padding_svg-tex.pdf , page1 used
+ on input line 56.
+(pdftex.def)             Requested size: 211.38832pt x 26.8555pt.
+)
+Package svg Info: Last page of `./svg-inkscape/cluster-distribution_svg-tex.pdf
+' is 1 on input line 618.
+
+(svg-inkscape/cluster-distribution_svg-tex.pdf_tex
+<./svg-inkscape/cluster-distribution_svg-tex.pdf, id=399, page=1, 647.79515pt x
+ 173.89969pt>
+File: ./svg-inkscape/cluster-distribution_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/cluster-distribution_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/cluster-distribution_svg-tex.pdf , page
+1 used on input line 56.
+(pdftex.def)             Requested size: 211.38832pt x 56.74757pt.
 )
 
-Class acmart Warning: A possible image without description on input line 511.
+Class acmart Warning: A possible image without description on input line 624.
 
+[8.8 <./svg-inkscape/matrix-partition_svg-tex.pdf> <./svg-inkscape/packets-chan
+nels_svg-tex.pdf
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+pdfTeX warning: pdflatex (file ./svg-inkscape/packets-channels_svg-tex.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/sparse-padding_svg-tex.pdf
 
-[8.8 <./svg-inkscape/tile-values_svg-tex.pdf> <./svg-inkscape/spmv-paper_svg-te
-x.pdf
+pdfTeX warning: pdflatex (file ./svg-inkscape/sparse-padding_svg-tex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
+> <./svg-inkscape/cluster-distribution_svg-tex.pdf
 
-pdfTeX warning: pdflatex (file ./svg-inkscape/spmv-paper_svg-tex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./svg-inkscape/cluster-distribution_svg-tex.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
 >]
-Package svg Info: Last page of `./svg-inkscape/vector-unit_svg-tex.pdf' is 1 on
- input line 530.
- (svg-inkscape/vector-unit_svg-tex.pdf_tex
-<./svg-inkscape/vector-unit_svg-tex.pdf, id=1214, page=1, 522.45187pt x 645.913
-13pt>
-File: ./svg-inkscape/vector-unit_svg-tex.pdf Graphic file (type pdf)
-<use ./svg-inkscape/vector-unit_svg-tex.pdf, page 1>
-Package pdftex.def Info: ./svg-inkscape/vector-unit_svg-tex.pdf , page1 used on
- input line 56.
-(pdftex.def)             Requested size: 328.82707pt x 406.5332pt.
+Package svg Info: Last page of `./svg-inkscape/spmv-paper_svg-tex.pdf' is 1 on 
+input line 641.
+ (svg-inkscape/spmv-paper_svg-tex.pdf_tex
+<./svg-inkscape/spmv-paper_svg-tex.pdf, id=1441, page=1, 723.45282pt x 373.395p
+t>
+File: ./svg-inkscape/spmv-paper_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/spmv-paper_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/spmv-paper_svg-tex.pdf , page1 used on 
+input line 56.
+(pdftex.def)             Requested size: 469.75502pt x 242.45319pt.
 )
 
-Class acmart Warning: A possible image without description on input line 533.
+Class acmart Warning: A possible image without description on input line 644.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:sparse=padding' on page 9 undefined on input line
+ 647.
+
+[9.9 <./svg-inkscape/spmv-paper_svg-tex.pdf>]
+Package svg Info: Last page of `./svg-inkscape/vector-read-write_svg-tex.pdf' i
+s 1 on input line 670.
+
+(svg-inkscape/vector-read-write_svg-tex.pdf_tex
+<./svg-inkscape/vector-read-write_svg-tex.pdf, id=1592, page=1, 514.92375pt x 3
+39.51843pt>
+File: ./svg-inkscape/vector-read-write_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/vector-read-write_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/vector-read-write_svg-tex.pdf , page1 u
+sed on input line 56.
+(pdftex.def)             Requested size: 234.8775pt x 154.86449pt.
+)
+Package svg Info: Last page of `./svg-inkscape/vector-unit-out_svg-tex.pdf' is 
+1 on input line 677.
+
+(svg-inkscape/vector-unit-out_svg-tex.pdf_tex
+<./svg-inkscape/vector-unit-out_svg-tex.pdf, id=1594, page=1, 330.48468pt x 167
+.12437pt>
+File: ./svg-inkscape/vector-unit-out_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/vector-unit-out_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/vector-unit-out_svg-tex.pdf , page1 use
+d on input line 56.
+(pdftex.def)             Requested size: 211.38832pt x 106.90056pt.
+)
+
+Class acmart Warning: A possible image without description on input line 683.
 
 Package svg Info: Last page of `./svg-inkscape/pe_svg-tex.pdf' is 1 on input li
-ne 543.
+ne 693.
 (svg-inkscape/pe_svg-tex.pdf_tex
-<./svg-inkscape/pe_svg-tex.pdf, id=1218, page=1, 552.56438pt x 330.48468pt>
+<./svg-inkscape/pe_svg-tex.pdf, id=1598, page=1, 552.56438pt x 330.48468pt>
 File: ./svg-inkscape/pe_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/pe_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/pe_svg-tex.pdf , page1 used on input li
 ne 56.
-(pdftex.def)             Requested size: 469.75502pt x 280.95364pt.
+(pdftex.def)             Requested size: 375.80544pt x 224.7619pt.
 )
 
-Class acmart Warning: A possible image without description on input line 546.
+Class acmart Warning: A possible image without description on input line 696.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9.9 <./svg-inkscape/input-packets_svg-tex.pdf>]
 
-LaTeX Warning: Reference `fig:dataflow' on page 10 undefined on input line 550.
+LaTeX Warning: Reference `fig:dataflow' on page 10 undefined on input line 700.
 
 
+[10.10 <./svg-inkscape/vector-read-write_svg-tex.pdf> <./svg-inkscape/vector-un
+it-out_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/vector-unit-out_svg-tex.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>]
 Package svg Info: Last page of `./svg-inkscape/dataflow_svg-tex.pdf' is 1 on in
-put line 555.
-(svg-inkscape/dataflow_svg-tex.pdf_tex
-<./svg-inkscape/dataflow_svg-tex.pdf, id=1554, page=1, 384.31078pt x 165.61874p
+put line 705.
+ (svg-inkscape/dataflow_svg-tex.pdf_tex
+<./svg-inkscape/dataflow_svg-tex.pdf, id=1818, page=1, 384.31078pt x 165.61874p
 t>
 File: ./svg-inkscape/dataflow_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/dataflow_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/dataflow_svg-tex.pdf , page1 used on in
 put line 56.
-(pdftex.def)             Requested size: 469.75502pt x 202.45384pt.
+(pdftex.def)             Requested size: 375.80544pt x 161.96408pt.
 )
 
-Class acmart Warning: A possible image without description on input line 558.
+Class acmart Warning: A possible image without description on input line 708.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10.10 <./svg-inkscape/vector-unit_svg-tex.pdf>] [11.11 <./svg-inkscape/pe_svg
--tex.pdf> <./svg-inkscape/dataflow_svg-tex.pdf
+[11.11 <./svg-inkscape/pe_svg-tex.pdf> <./svg-inkscape/dataflow_svg-tex.pdf
 
 pdfTeX warning: pdflatex (file ./svg-inkscape/dataflow_svg-tex.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
@@ -1920,12 +2038,12 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 )
 File: fig-compiler-detection.tex Graphic file (type tex)
 
-Overfull \hbox (24.31905pt too wide) in paragraph at lines 641--642
+Overfull \hbox (24.31905pt too wide) in paragraph at lines 791--792
  [][] 
  []
 
 
-Class acmart Warning: A possible image without description on input line 644.
+Class acmart Warning: A possible image without description on input line 794.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1934,22 +2052,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: fig-execution-times.tex Graphic file (type tex)
 
 
-Class acmart Warning: A possible image without description on input line 689.
+Class acmart Warning: A possible image without description on input line 839.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Package natbib Warning: Citation `Vitis' on page 13 undefined on input line 695
+Package natbib Warning: Citation `Vitis' on page 13 undefined on input line 845
 .
 
-
-Underfull \vbox (badness 2547) has occurred while \output is active []
-
- [13.13]
-[14.14]
+[13.13] [14.14]
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 731.
+(Font)              scaled to size 9.0pt on input line 881.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1989,7 +2103,7 @@ Class acmart Warning: Some images may lack descriptions.
 
 
 Class acmart Warning: \vspace should only be used to provide space above/below 
-surrounding objects on input line 1493.
+surrounding objects on input line 1643.
 
 (/home/veronia/.miktex/texmfs/install/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
@@ -2013,33 +2127,35 @@ Package rerunfilecheck Info: File `sample-manuscript.out' has not changed.
 (rerunfilecheck)             Checksum: 54AF91B4F8726D8A4F68C0E29B57CA0A;4182.
  ) 
 Here is how much of TeX's memory you used:
- 46384 strings out of 474371
- 1030589 string characters out of 5747625
- 1979751 words of memory out of 5000000
- 67071 multiletter control sequences out of 15000+600000
- 767454 words of font info for 481 fonts, out of 8000000 for 9000
+ 48355 strings out of 474371
+ 1059361 string characters out of 5747625
+ 2078751 words of memory out of 5000000
+ 68959 multiletter control sequences out of 15000+600000
+ 768070 words of font info for 483 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 95i,24n,131p,1290b,2685s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/veronia/.miktex/texmfs/install/fonts/type1/public/newtx/LibertineMathM
-I.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/newtx/LibertineM
-athMI5.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/newtx/Liber
-tineMathMI7.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/libert
-ine/LinBiolinumT.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/l
-ibertine/LinBiolinumTB.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/pu
-blic/libertine/LinBiolinumTI.pfb></home/veronia/.miktex/texmfs/install/fonts/ty
-pe1/public/libertine/LinLibertineT.pfb></home/veronia/.miktex/texmfs/install/fo
-nts/type1/public/libertine/LinLibertineTB.pfb></home/veronia/.miktex/texmfs/ins
-tall/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/share/miktex-t
-exmf/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/share/miktex-texmf/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/share/miktex-texmf/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex-texmf/fonts/type1/publi
-c/amsfonts/cm/cmsy8.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/publi
-c/newtx/txexs.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/newt
-x/txmiaX.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/newtx/txs
-ys.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on sample-manuscript.pdf (18 pages, 1700045 bytes).
+ 95i,24n,131p,1290b,2683s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/veronia/.miktex/texmfs/install/fonts/type1/public/inconsolata/Inconsol
+ata-zi4r.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/newtx/Lib
+ertineMathMI.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/newtx
+/LibertineMathMI5.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/public/
+newtx/LibertineMathMI7.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/pu
+blic/libertine/LinBiolinumT.pfb></home/veronia/.miktex/texmfs/install/fonts/typ
+e1/public/libertine/LinBiolinumTB.pfb></home/veronia/.miktex/texmfs/install/fon
+ts/type1/public/libertine/LinBiolinumTI.pfb></home/veronia/.miktex/texmfs/insta
+ll/fonts/type1/public/libertine/LinLibertineT.pfb></home/veronia/.miktex/texmfs
+/install/fonts/type1/public/libertine/LinLibertineTB.pfb></home/veronia/.miktex
+/texmfs/install/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/local/sha
+re/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/share/mikt
+ex-texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/share/miktex-texm
+f/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/share/miktex-texmf/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb></home/veronia/.miktex/texmfs/install/fonts/
+type1/public/newtx/txexs.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/
+public/newtx/txmiaX.pfb></home/veronia/.miktex/texmfs/install/fonts/type1/publi
+c/newtx/txsys.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/helvetic/uhvr8
+a.pfb>
+Output written on sample-manuscript.pdf (18 pages, 1830091 bytes).
 PDF statistics:
- 2211 PDF objects out of 2487 (max. 8388607)
- 120 named destinations out of 1000 (max. 500000)
- 125243 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 2266 PDF objects out of 2487 (max. 8388607)
+ 168 named destinations out of 1000 (max. 500000)
+ 126297 words of extra memory for PDF output out of 128383 (max. 10000000)
 
